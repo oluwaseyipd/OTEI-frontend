@@ -11,8 +11,54 @@ body {
     overflow-x: hidden;
 }
 
-/* Montserrat Font Weight Variables */
+/* Ogbomoso Ignite Brand Custom Properties */
 :root {
+    /* Brand Colors */
+    --brand-navy: #0b1426;
+    --brand-navy-light: #1a2b47;
+    --brand-navy-dark: #060a15;
+    --brand-orange: #ff6b35;
+    --brand-orange-light: #ff8a5c;
+    --brand-orange-dark: #e55a2b;
+    --brand-yellow: #ffd23f;
+    --brand-yellow-light: #ffe066;
+    --brand-yellow-dark: #e6bd38;
+    --brand-white: #ffffff;
+
+    /* Brand Gradients */
+    --gradient-ignite: linear-gradient(
+        135deg,
+        var(--brand-orange) 0%,
+        var(--brand-yellow) 100%
+    );
+    --gradient-ignite-hover: linear-gradient(
+        135deg,
+        var(--brand-orange-dark) 0%,
+        var(--brand-yellow-dark) 100%
+    );
+    --gradient-navy: linear-gradient(
+        135deg,
+        var(--brand-navy) 0%,
+        var(--brand-navy-light) 100%
+    );
+    --gradient-hero: linear-gradient(
+        135deg,
+        var(--brand-navy-dark) 0%,
+        var(--brand-navy) 50%,
+        var(--brand-navy-light) 100%
+    );
+
+    /* Brand Shadows */
+    --shadow-brand: 0 4px 14px 0 rgba(11, 20, 38, 0.15);
+    --shadow-brand-lg:
+        0 10px 25px -3px rgba(11, 20, 38, 0.1),
+        0 4px 6px -2px rgba(11, 20, 38, 0.05);
+    --shadow-ignite: 0 4px 14px 0 rgba(255, 107, 53, 0.25);
+    --shadow-ignite-lg:
+        0 10px 25px -3px rgba(255, 107, 53, 0.15),
+        0 4px 6px -2px rgba(255, 107, 53, 0.05);
+
+    /* Montserrat Font Weight Variables */
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -42,7 +88,7 @@ body {
 }
 
 .hero-bg {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1147 50%, #2d1b69 100%);
+    background: var(--gradient-hero);
     position: relative;
     overflow: hidden;
 }
@@ -55,7 +101,7 @@ body {
 .shape-1 {
     width: 300px;
     height: 300px;
-    background: linear-gradient(45deg, #4169e1, #1e3a8a);
+    background: var(--gradient-ignite);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     top: 10%;
     right: 20%;
@@ -65,7 +111,11 @@ body {
 .shape-2 {
     width: 250px;
     height: 250px;
-    background: linear-gradient(135deg, #dc143c, #8b0000);
+    background: linear-gradient(
+        135deg,
+        var(--brand-orange),
+        var(--brand-orange-dark)
+    );
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     top: 15%;
     left: 15%;
@@ -75,7 +125,11 @@ body {
 .shape-3 {
     width: 200px;
     height: 200px;
-    background: linear-gradient(225deg, #8b5cf6, #6366f1);
+    background: linear-gradient(
+        225deg,
+        var(--brand-yellow),
+        var(--brand-orange)
+    );
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     bottom: 20%;
     right: 15%;
@@ -85,7 +139,7 @@ body {
 .shape-4 {
     width: 280px;
     height: 280px;
-    background: linear-gradient(180deg, #1e40af, #312e81);
+    background: var(--gradient-navy);
     clip-path: polygon(
         30% 0%,
         70% 0%,
@@ -104,7 +158,11 @@ body {
 .shape-5 {
     width: 180px;
     height: 180px;
-    background: linear-gradient(90deg, #be123c, #dc2626);
+    background: linear-gradient(
+        90deg,
+        var(--brand-orange-dark),
+        var(--brand-orange)
+    );
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     top: 40%;
     right: 10%;
@@ -114,7 +172,11 @@ body {
 .shape-6 {
     width: 220px;
     height: 220px;
-    background: linear-gradient(270deg, #5b21b6, #7c3aed);
+    background: linear-gradient(
+        270deg,
+        var(--brand-yellow),
+        var(--brand-yellow-dark)
+    );
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     top: 60%;
     left: 25%;
@@ -204,13 +266,13 @@ body {
     height: 10px;
     border-radius: 50%;
     background-color: transparent;
-    border: 2px solid #dc2626;
+    border: 2px solid var(--brand-orange);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .nav-dot.active {
-    background-color: #dc2626;
+    background-color: var(--brand-orange);
     transform: scale(1.3);
 }
 
@@ -266,9 +328,9 @@ body {
 #schedule {
     background: linear-gradient(
         to bottom,
-        #2563eb 0%,
-        #2563eb 70%,
-        #9333ea 100%
+        var(--brand-navy) 0%,
+        var(--brand-navy) 70%,
+        var(--brand-navy-light) 100%
     );
     position: relative;
 }
@@ -312,8 +374,8 @@ body {
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        rgba(147, 51, 234, 0.3) 50%,
-        rgba(147, 51, 234, 0.8) 100%
+        rgba(11, 20, 38, 0.3) 50%,
+        rgba(11, 20, 38, 0.8) 100%
     );
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
@@ -338,10 +400,120 @@ body {
     background: transparent !important;
     backdrop-filter: blur(10px);
     z-index: 1000 !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-brand);
 }
 
 /* Body padding when navbar is fixed */
 body.navbar-fixed-active {
     padding-top: 80px;
+}
+
+/* Brand Utility Classes */
+.bg-brand-navy {
+    background-color: var(--brand-navy);
+}
+
+.bg-brand-navy-light {
+    background-color: var(--brand-navy-light);
+}
+
+.bg-brand-navy-dark {
+    background-color: var(--brand-navy-dark);
+}
+
+.bg-brand-orange {
+    background-color: var(--brand-orange);
+}
+
+.bg-brand-orange-light {
+    background-color: var(--brand-orange-light);
+}
+
+.bg-brand-orange-dark {
+    background-color: var(--brand-orange-dark);
+}
+
+.bg-brand-yellow {
+    background-color: var(--brand-yellow);
+}
+
+.bg-gradient-ignite {
+    background: var(--gradient-ignite);
+}
+
+.bg-gradient-ignite:hover {
+    background: var(--gradient-ignite-hover);
+}
+
+.bg-gradient-navy {
+    background: var(--gradient-navy);
+}
+
+.text-brand-navy {
+    color: var(--brand-navy);
+}
+
+.text-brand-orange {
+    color: var(--brand-orange);
+}
+
+.text-brand-orange:hover {
+    color: var(--brand-orange-dark);
+}
+
+.text-brand-yellow {
+    color: var(--brand-yellow);
+}
+
+.border-brand-orange {
+    border-color: var(--brand-orange);
+}
+
+.border-brand-navy {
+    border-color: var(--brand-navy);
+}
+
+.shadow-brand {
+    box-shadow: var(--shadow-brand);
+}
+
+.shadow-brand-lg {
+    box-shadow: var(--shadow-brand-lg);
+}
+
+.shadow-ignite {
+    box-shadow: var(--shadow-ignite);
+}
+
+.shadow-ignite-lg {
+    box-shadow: var(--shadow-ignite-lg);
+}
+
+/* Brand Button Styles */
+.btn-primary-ignite {
+    background: var(--gradient-ignite);
+    color: var(--brand-white);
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-ignite);
+}
+
+.btn-primary-ignite:hover {
+    background: var(--gradient-ignite-hover);
+    box-shadow: var(--shadow-ignite-lg);
+    transform: translateY(-1px);
+}
+
+.btn-secondary-navy {
+    background-color: var(--brand-navy);
+    color: var(--brand-white);
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-brand);
+}
+
+.btn-secondary-navy:hover {
+    background-color: var(--brand-navy-light);
+    box-shadow: var(--shadow-brand-lg);
+    transform: translateY(-1px);
 }

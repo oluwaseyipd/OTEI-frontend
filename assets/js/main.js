@@ -34,7 +34,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Navigation Dots Functionality
 const navDots = document.querySelectorAll(".nav-dot");
-const sections = ["home", "about", "speakers", "schedule", "sponsors", "venue"];
+const sections = [
+  "home",
+  "about",
+  "speakers",
+  "schedule",
+  "volunteer",
+  "sponsors",
+  "venue",
+];
 
 navDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
@@ -156,3 +164,123 @@ window.addEventListener("resize", function () {
     heroSection.offsetHeight;
   }
 });
+
+// Volunteer Form Handling
+document.addEventListener("DOMContentLoaded", function () {
+  const volunteerForm = document.getElementById("volunteerForm");
+
+  if (volunteerForm) {
+    volunteerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(volunteerForm);
+      const data = {};
+
+      // Process regular fields
+      for (let [key, value] of formData.entries()) {
+        if (key === "availability[]") {
+          if (!data.availability) data.availability = [];
+          data.availability.push(value);
+        } else {
+          data[key] = value;
+        }
+      }
+
+      // Validate required fields
+      const requiredFields = [
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "location",
+        "volunteerArea",
+        "motivation",
+        "terms",
+      ];
+      let isValid = true;
+
+      requiredFields.forEach((field) => {
+        const input = volunteerForm.querySelector(`[name="${field}"]`);
+        if (!data[field] || data[field].trim() === "") {
+          isValid = false;
+          input.style.borderColor = "#ff6b35";
+          input.style.boxShadow = "0 0 0 2px rgba(255, 107, 53, 0.2)";
+        } else {
+          input.style.borderColor = "";
+          input.style.boxShadow = "";
+        }
+      });
+
+      // Check availability checkboxes
+      if (!data.availability || data.availability.length === 0) {
+        isValid = false;
+        const availabilitySection = volunteerForm
+          .querySelector('input[name="availability[]"]')
+          .closest("div")
+          .closest("div");
+        availabilitySection.style.borderColor = "#ff6b35";
+      }
+
+      if (!isValid) {
+        // Show error message
+        showFormMessage("Please fill in all required fields.", "error");
+        return;
+      }
+
+      // Simulate form submission
+      showFormMessage(
+        "Thank you! Your volunteer application has been submitted. We'll contact you within 48 hours.",
+        "success",
+      );
+
+      // Reset form
+      volunteerForm.reset();
+
+      // In a real application, you would send the data to your server:
+      // fetch('/api/volunteer', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+    });
+  }
+});
+
+// Form message display function
+function showFormMessage(message, type) {
+  const existingMessage = document.querySelector(".form-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `form-message p-4 rounded-lg font-montserrat text-center mb-4 ${
+    type === "success"
+      ? "bg-green-100 text-green-800 border border-green-200"
+      : "bg-red-100 text-red-800 border border-red-200"
+  }`;
+  messageDiv.textContent = message;
+
+  const form = document.getElementById("volunteerForm");
+  if (form) {
+    form.parentNode.insertBefore(messageDiv, form);
+
+    // Remove message after 5 seconds
+    setTimeout(() => {
+      messageDiv.remove();
+    }, 5000);
+  }
+}
+
+// Add smooth scroll to volunteer section
+function smoothScrollToVolunteer() {
+  const volunteerSection = document.getElementById("volunteer");
+  if (volunteerSection) {
+    volunteerSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+}
