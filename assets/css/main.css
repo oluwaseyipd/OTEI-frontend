@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 * {
     margin: 0;
@@ -7,8 +7,38 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+}
+
+/* Montserrat Font Weight Variables */
+:root {
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+}
+
+/* Font Weight Utility Classes */
+.font-montserrat-normal {
+    font-weight: var(--font-weight-normal);
+}
+.font-montserrat-medium {
+    font-weight: var(--font-weight-medium);
+}
+.font-montserrat-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+.font-montserrat-bold {
+    font-weight: var(--font-weight-bold);
+}
+.font-montserrat-extrabold {
+    font-weight: var(--font-weight-extrabold);
+}
+.font-montserrat-black {
+    font-weight: var(--font-weight-black);
 }
 
 .hero-bg {
