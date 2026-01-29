@@ -517,3 +517,48 @@ body.navbar-fixed-active {
     box-shadow: var(--shadow-brand-lg);
     transform: translateY(-1px);
 }
+
+/* Volunteer Form Specific Styles */
+#volunteerForm input[type="text"],
+#volunteerForm input[type="email"],
+#volunteerForm input[type="tel"],
+#volunteerForm textarea,
+#volunteerForm select {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+#volunteerForm input[type="text"]::placeholder,
+#volunteerForm input[type="email"]::placeholder,
+#volunteerForm input[type="tel"]::placeholder,
+#volunteerForm textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 400 !important;
+}
+
+#volunteerForm input[type="text"]:focus,
+#volunteerForm input[type="email"]:focus,
+#volunteerForm input[type="tel"]:focus,
+#volunteerForm textarea:focus,
+#volunteerForm select:focus {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: var(--brand-orange) !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3) !important;
+}
+
+#volunteerForm select option {
+    background-color: var(--brand-navy);
+    color: white;
+    padding: 8px;
+}
+
+#volunteerForm input[type="checkbox"] {
+    accent-color: var(--brand-orange);
+}
+
+#volunteerForm input[type="checkbox"]:checked {
+    background-color: var(--brand-orange);
+    border-color: var(--brand-orange);
+}
