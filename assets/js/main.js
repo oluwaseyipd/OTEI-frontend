@@ -1,23 +1,45 @@
 // JavaScript for OTEI Frontend
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle with Hamburger to X Animation
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
-const closeMobileMenu = document.getElementById("closeMobileMenu");
 const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
 mobileMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.remove("hidden");
-});
+  const isMenuOpen = !mobileMenu.classList.contains("hidden");
 
-closeMobileMenu.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
+  if (isMenuOpen) {
+    // Close menu
+    mobileMenu.classList.add("hidden");
+    mobileMenuBtn.classList.remove("active");
+    document.body.classList.remove("mobile-menu-open");
+    document.body.style.overflow = "auto";
+  } else {
+    // Open menu
+    mobileMenu.classList.remove("hidden");
+    mobileMenuBtn.classList.add("active");
+    document.body.classList.add("mobile-menu-open");
+    document.body.style.overflow = "hidden";
+  }
 });
 
 mobileNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
+    mobileMenuBtn.classList.remove("active");
+    document.body.classList.remove("mobile-menu-open");
+    document.body.style.overflow = "auto";
   });
+});
+
+// Close mobile menu when clicking outside
+mobileMenu.addEventListener("click", (e) => {
+  if (e.target === mobileMenu) {
+    mobileMenu.classList.add("hidden");
+    mobileMenuBtn.classList.remove("active");
+    document.body.classList.remove("mobile-menu-open");
+    document.body.style.overflow = "auto";
+  }
 });
 
 // Smooth Scroll
@@ -149,6 +171,30 @@ document.querySelectorAll(".floating-shape[data-nav]").forEach((shape) => {
       });
     }
   });
+});
+
+// Speaker Progress Bar Animation on Scroll
+const speakerContainers = document.querySelectorAll(".speaker-image-container");
+
+const speakerObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add a small delay to make the animation more noticeable
+        setTimeout(() => {
+          entry.target.classList.add("progress-active");
+        }, 200);
+      }
+    });
+  },
+  {
+    threshold: 0.3, // Trigger when 30% of the speaker image is visible
+    rootMargin: "-50px 0px", // Trigger slightly after the image starts appearing
+  },
+);
+
+speakerContainers.forEach((container) => {
+  speakerObserver.observe(container);
 });
 
 // Framer Motion Animations
@@ -507,5 +553,196 @@ function showExhibitorFormMessage(message, type) {
     setTimeout(() => {
       messageDiv.remove();
     }, 5000);
+  }
+}
+
+// Registration Form Handling
+document.addEventListener("DOMContentLoaded", function () {
+  const registrationForm = document.getElementById("registrationForm");
+  const accessibilityYes = document.getElementById("accessibilityYes");
+  const accessibilityNo = document.getElementById("accessibilityNo");
+  const accessibilityDetails = document.getElementById("accessibilityDetails");
+
+  // Handle accessibility details visibility with smooth transition
+  if (accessibilityYes && accessibilityNo && accessibilityDetails) {
+    accessibilityYes.addEventListener("change", function () {
+      if (this.checked) {
+        accessibilityDetails.classList.remove("hidden");
+        // Small delay to ensure the element is visible before animation
+        setTimeout(() => {
+          accessibilityDetails.classList.add("show");
+        }, 10);
+      }
+    });
+
+    accessibilityNo.addEventListener("change", function () {
+      if (this.checked) {
+        accessibilityDetails.classList.remove("show");
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+          accessibilityDetails.classList.add("hidden");
+          accessibilityDetails.value = "";
+        }, 400);
+      }
+    });
+  }
+
+  // Handle participant category limit (max 3)
+  const participantCheckboxes = document.querySelectorAll(
+    'input[name="participantCategory"]',
+  );
+  participantCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const checkedBoxes = document.querySelectorAll(
+        'input[name="participantCategory"]:checked',
+      );
+      if (checkedBoxes.length > 3) {
+        this.checked = false;
+        showRegistrationMessage(
+          "You can select a maximum of 3 participant categories.",
+          "error",
+        );
+      }
+    });
+  });
+
+  if (registrationForm) {
+    registrationForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(registrationForm);
+      const data = {};
+
+      // Process form fields
+      for (let [key, value] of formData.entries()) {
+        if (key === "participantCategory" || key === "interestAreas") {
+          if (!data[key]) data[key] = [];
+          data[key].push(value);
+        } else {
+          data[key] = value;
+        }
+      }
+
+      // Validation
+      let isValid = true;
+      const errors = [];
+
+      // Required fields validation
+      const requiredFields = [
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "gender",
+        "city",
+        "organizationName",
+        "role",
+        "fullAttendance",
+        "hearAbout",
+        "agreeUpdates",
+        "physicalEvent",
+      ];
+
+      requiredFields.forEach((field) => {
+        if (!data[field] || data[field].trim() === "") {
+          isValid = false;
+          errors.push(`${field} is required`);
+          const input = registrationForm.querySelector(`[name="${field}"]`);
+          if (input) {
+            input.classList.add("error");
+          }
+        }
+      });
+
+      // Participant category validation (at least 1, max 3)
+      if (!data.participantCategory || data.participantCategory.length === 0) {
+        isValid = false;
+        errors.push("Please select at least one participant category");
+      } else if (data.participantCategory.length > 3) {
+        isValid = false;
+        errors.push("Please select maximum 3 participant categories");
+      }
+
+      // Interest areas validation (at least 1)
+      if (!data.interestAreas || data.interestAreas.length === 0) {
+        isValid = false;
+        errors.push("Please select at least one interest area");
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (data.email && !emailRegex.test(data.email)) {
+        isValid = false;
+        errors.push("Please enter a valid email address");
+      }
+
+      if (!isValid) {
+        showRegistrationMessage(
+          "Please fix the following errors: " + errors.join(", "),
+          "error",
+        );
+        return;
+      }
+
+      // Show loading state
+      document.body.classList.add("form-loading");
+      const submitBtn = registrationForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+
+      // Simulate form submission
+      setTimeout(() => {
+        showRegistrationMessage(
+          "Thank you for registering! Your registration has been submitted successfully. You will receive a confirmation email shortly.",
+          "success",
+        );
+
+        // Reset form
+        registrationForm.reset();
+        document.body.classList.remove("form-loading");
+        submitBtn.disabled = false;
+
+        // Remove error classes
+        document.querySelectorAll(".error").forEach((el) => {
+          el.classList.remove("error");
+        });
+
+        // Scroll to success message
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 2000);
+
+      // In a real application, you would send the data to your server:
+      // fetch('/api/register', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+    });
+  }
+});
+
+// Registration form message display function
+function showRegistrationMessage(message, type) {
+  const existingMessage = document.querySelector(".registration-form-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `registration-form-message p-4 rounded-lg font-montserrat text-center mb-4 ${
+    type === "success"
+      ? "form-success"
+      : "bg-red-100 text-red-800 border border-red-200"
+  }`;
+  messageDiv.textContent = message;
+
+  const form = document.getElementById("registrationForm");
+  if (form) {
+    form.parentNode.insertBefore(messageDiv, form);
+
+    // Remove message after 7 seconds
+    setTimeout(() => {
+      messageDiv.remove();
+    }, 7000);
   }
 }

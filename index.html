@@ -145,8 +145,10 @@
         <nav id="navbar" class="hero-content relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-4">
             <!--<div class="text-white text-2xl md:text-3xl font-bold">The Grid.</div>-->
             <!-- Dynamic Logo - White for hero, Colored for scrolled -->
-            <img id="navbarLogoWhite" src="assets/images/navbar-logo-w.png" alt="The Grid Logo" class="w-24 md:w-32 transition-opacity duration-300">
-            <img id="navbarLogoColored" src="assets/images/navbar-logo.png" alt="The Grid Logo" class="w-24 md:w-32 absolute opacity-0 transition-opacity duration-300">
+            <a href="index.html" class="relative w-24 md:w-32 transition-opacity duration-300">
+                <img id="navbarLogoWhite" src="assets/images/navbar-logo-w.png" alt="The Grid Logo" class="w-24 md:w-32 transition-opacity duration-300">
+                <img id="navbarLogoColored" src="assets/images/navbar-logo.png" alt="The Grid Logo" class="w-24 md:w-32 absolute top-0 left-0 opacity-0 transition-opacity duration-300">
+            </a>
             <ul id="navbarMenu" class="hidden md:flex space-x-8 lg:space-x-12 text-white font-montserrat transition-colors duration-300">
                 <li><a href="#about" class="nav-link hover:text-brand-orange transition-colors" data-section="about">About</a></li>
                 <li><a href="#speakers" class="nav-link hover:text-brand-orange transition-colors" data-section="speakers">Speakers</a></li>
@@ -155,19 +157,20 @@
                 <li><a href="#partnership" class="nav-link hover:text-brand-orange transition-colors" data-section="partnership">Partnership</a></li>
             </ul>
 
-            <a href="#" id="navbarRegisterBtn" class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat">Register Now</a>
+            <a href="register.html" id="navbarRegisterBtn" class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat">Register Now</a>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white transition-colors duration-300" id="mobileMenuBtn">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+            <!-- Mobile Menu Button with Hamburger to X Animation -->
+            <button class="lg:hidden text-white transition-colors duration-300 relative w-8 h-8 flex items-center justify-center" id="mobileMenuBtn">
+                <div class="hamburger-lines">
+                    <span class="hamburger-line hamburger-line-1"></span>
+                    <span class="hamburger-line hamburger-line-2"></span>
+                    <span class="hamburger-line hamburger-line-3"></span>
+                </div>
             </button>
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center">
-            <button class="absolute top-8 right-6 text-white text-3xl font-montserrat" id="closeMobileMenu">&times;</button>
+        <div id="mobileMenu" class="hidden lg:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center">
             <ul class="flex flex-col space-y-8 text-white text-xl text-center font-montserrat">
                 <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
                 <li><a href="#speakers" class="mobile-nav-link" data-section="speakers">Speakers</a></li>
@@ -179,7 +182,7 @@
 
         <!-- Hero Content -->
         <div class="hero-content relative z-10 flex items-center justify-center min-h-[calc(100vh-120px)] px-6 md:px-12 lg:px-20">
-            <div class="flex flex-col md:flex-row items-center md:items-end text-center space-y-12 md:space-y-0 space-x-12 md:space-x-20">
+            <div class="flex flex-col md:flex-row items-center md:items-end text-center space-y-24 md:space-y-0 space-x-12 md:space-x-20">
                 <div class="flex flex-col items-start mb-10 md:mb-0">
                     <p class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-6 uppercase">Technology & Entrepreneurship Conference</p>
                     <div class="flex items-start">
@@ -196,9 +199,9 @@
                         <p class="text-sm md:text-base">Ogbomoso Innovation Hub, Nigeria</p>
                     </div>
 
-                    <button class="btn-primary-ignite px-10 py-4 text-base md:text-lg rounded-md font-montserrat transition-all duration-300 transform">
+                    <a href="register.html" class="btn-primary-ignite px-10 py-4 text-base md:text-lg rounded-md font-montserrat transition-all duration-300 transform">
                         Register Now
-                    </button>
+                    </a>
                 </div>
 
             </div>
@@ -206,26 +209,31 @@
 
         <!-- Right Navigation Dots -->
         <div class="hidden lg:flex fixed right-8 top-1/2 transform -translate-y-1/2 flex-col space-y-6 z-40">
-            <div class="nav-dot active"></div>
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
+            <div class="nav-dot active" data-section="home">
+                <div class="nav-dot-tooltip">Home</div>
+            </div>
+            <div class="nav-dot" data-section="about">
+                <div class="nav-dot-tooltip">About</div>
+            </div>
+            <div class="nav-dot" data-section="speakers">
+                <div class="nav-dot-tooltip">Speakers</div>
+            </div>
+            <div class="nav-dot" data-section="schedule">
+                <div class="nav-dot-tooltip">Schedule</div>
+            </div>
+            <div class="nav-dot" data-section="volunteer">
+                <div class="nav-dot-tooltip">Volunteer</div>
+            </div>
+            <div class="nav-dot" data-section="partnership">
+                <div class="nav-dot-tooltip">Partnership</div>
+            </div>
         </div>
-
-        <!-- Chat Button
-        <button class="fixed bottom-8 right-8 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 flex items-center space-x-2 z-20 transition-all duration-300 transform hover:scale-105">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-            </svg>
-        </button> -->
     </section>
 
     <!-- About Section -->
     <section id="about" class="bg-white py-20 pb-48 md:pb-64 relative overflow-hidden z-20">
         <!-- Left Decorative Graphic -->
-        <div class="absolute left-0 top-1/4 w-64 md:w-80 opacity-80">
+        <div class="hidden md:block absolute left-0 top-1/4 w-64 md:w-80 opacity-80">
             <svg viewBox="0 0 400 400" class="w-full h-full">
                 <defs>
                     <linearGradient id="leftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -242,7 +250,7 @@
         </div>
 
         <!-- Right Decorative Graphic -->
-        <div class="absolute right-0 top-1/3 w-64 md:w-96 opacity-80">
+        <div class="hidden md:block absolute right-0 top-1/3 w-64 md:w-96 opacity-80">
             <svg viewBox="0 0 500 500" class="w-full h-full">
                 <defs>
                     <linearGradient id="rightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -286,14 +294,14 @@
     <!-- Speakers Section -->
     <section id="speakers" class="bg-brand-navy pt-48 md:pt-64 pb-20 relative">
         <!-- Bridging Image - Positioned at section boundary -->
-        <div class="absolute -top-24 md:-top-56 left-1/2 transform -translate-x-1/2 z-40 px-6 md:px-12 lg:px-20">
-            <div class="max-w-5xl mx-auto">
-                <div class="relative overflow-hidden rounded-lg shadow-2xl">
-                    <img src="assets/images/about-img.jpg" alt="" srcset="" class="w-full h-auto">
+        <div class="bridging-image-container absolute -top-32 md:-top-56 left-1/2 transform -translate-x-1/2 z-40 px-4 sm:px-6 md:px-12 lg:px-20 w-full">
+            <div class="max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto">
+                <div class="relative overflow-hidden rounded-lg shadow-2xl aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9]">
+                    <img src="assets/images/about-img.jpg" alt="About Section Image" srcset="" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 mt-60">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 mt-8 md:mt-80">
             <!-- Section Title -->
             <div class="flex items-start mb-20">
                 <div class="w-1 md:w-1.5 bg-gradient-ignite h-32 md:h-40 mr-6 md:mr-8"></div>
@@ -305,16 +313,14 @@
             <!-- Speaker 1 - Ricardo Taylor -->
             <div class="grid md:grid-cols-2 gap-8 md:gap-16 mb-20 items-center">
                 <div class="order-1">
-                    <div class="bg-gray-400 aspect-[3/4] relative overflow-hidden">
-                        <!-- <div class="absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-gradient-to-br from-gray-700 to-gray-900">
-                            Ricardo Taylor Photo
-                        </div> -->
-                        <img src="assets/images/speakers/speaker-1.jpg" alt="" srcset="">
+                    <div class="speaker-image-container bg-gray-400 aspect-[3/4] relative overflow-hidden" data-speaker="1">
+                        <img src="assets/images/speakers/speaker-1.jpg" alt="Adebayo Ogundimu" class="w-full h-full object-cover">
+                        <div class="speaker-progress-bar"></div>
                     </div>
                 </div>
                 <div class="order-2">
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
-                        Adebayo<br>Ogundimu
+                    <h3 class="text-3xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
+                        Adebayo <br class="hidden md:block">Ogundimu
                     </h3>
                     <p class="text-white text-sm md:text-base font-montserrat mb-6 uppercase tracking-wider">
                         FOUNDER & CEO, TECHAFRICA
@@ -345,8 +351,8 @@
             <!-- Speaker 2 - Kemi Adesina -->
             <div class="grid md:grid-cols-2 gap-8 md:gap-16 mb-20 items-center">
                 <div class="order-2 md:order-1">
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
-                        Kemi<br>Adesina
+                    <h3 class="text-3xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
+                        Kemi <br class="hidden md:block">Adesina
                     </h3>
                     <p class="text-white text-sm md:text-base font-montserrat mb-6 uppercase tracking-wider">
                         DATA SCIENTIST, FINTECH NIGERIA
@@ -373,23 +379,27 @@
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="assets/images/speakers/speaker-1.jpg" alt="" srcset="">
+                    <div class="speaker-image-container bg-gray-400 aspect-[3/4] relative overflow-hidden" data-speaker="2">
+                        <img src="assets/images/speakers/speaker-1.jpg" alt="Kemi Adesina" class="w-full h-full object-cover">
+                        <div class="speaker-progress-bar"></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Speaker 3 - Funmi Adebayo -->
             <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div class="order-1">
-                    <div class="bg-gray-400 aspect-[3/4] relative overflow-hidden">
-                        <img src="assets/images/speakers/speaker-1.jpg" alt="" srcset="">
+                    <div class="speaker-image-container bg-gray-400 aspect-[3/4] relative overflow-hidden" data-speaker="3">
+                        <img src="assets/images/speakers/speaker-1.jpg" alt="Funmi Adebayo" class="w-full h-full object-cover">
+                        <div class="speaker-progress-bar"></div>
                     </div>
                 </div>
                 <div class="order-2">
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
-                        Funmi<br>Adebayo
+                    <h3 class="text-3xl md:text-5xl lg:text-6xl font-montserrat font-bold text-brand-orange mb-4">
+                        Funmi <br class="hidden md:block">Adebayo
                     </h3>
                     <p class="text-white text-sm md:text-base font-montserrat mb-6 uppercase tracking-wider">
-                        UX DESIGN LEAD<br>DIGITAL LAGOS
+                        UX DESIGN LEAD <br class="hidden md:block">DIGITAL LAGOS
                     </p>
                     <div class="flex space-x-4 mb-8">
                         <a href="#" class="text-white hover:text-brand-orange transition-colors">
@@ -437,7 +447,7 @@
                 <!-- Left Column -->
                 <div class="space-y-8">
                     <!-- Orange Divider Line -->
-            <div class="w-1/2 h-2 bg-gradient-ignite mb-16"></div>
+            <div class="hidden md:block w-1/2 h-2 bg-gradient-ignite mb-16"></div>
                     <div>
                         <h3 class="text-4xl md:text-5xl font-montserrat font-bold text-brand-navy mb-3">10:00</h3>
                         <p class="text-brand-orange font-montserrat font-semibold text-sm uppercase mb-1">ADEBAYO OGUNDIMU:</p>
@@ -456,8 +466,8 @@
                 </div>
 
                 <!-- Right Column -->
-                <div class="space-y-8">
-                    <div class="w-1/2 h-2 bg-gradient-ignite mb-16"></div>
+                <div class="space-y-8 -mt-8 md:mt-0">
+                    <div class="hidden md:block w-1/2 h-2 bg-gradient-ignite mb-16"></div>
                     <div>
                         <h3 class="text-4xl md:text-5xl font-montserrat font-bold text-brand-navy mb-3">15:00</h3>
                         <p class="text-brand-orange font-montserrat font-semibold text-sm uppercase mb-1">KEMI ADESINA:</p>
@@ -1199,6 +1209,84 @@
     </section>
 
 
+    <!-- Brands Section -->
+    <section class="bg-white py-16 md:py-20 overflow-hidden">
+        <!-- Single Sliding Brands Row -->
+        <div class="brands-slider">
+            <div class="brands-track brands-track-1">
+                <!-- First set of brands -->
+                <div class="brand-item">
+                    <div class="text-brand-navy text-3xl md:text-4xl font-bold border-2 border-brand-navy px-6 py-4">L</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold tracking-widest">MØKON</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-serif italic">Théo</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">
+                        <span class="block text-center">LU</span>
+                        <span class="block text-center -mt-2">SU</span>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-xl md:text-2xl tracking-widest font-light">hansen</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">BRAND</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-light">Company</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold tracking-wide">TECH</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">STARTUP</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-light tracking-wide">innovation</div>
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="brand-item">
+                    <div class="text-brand-navy text-3xl md:text-4xl font-bold border-2 border-brand-navy px-6 py-4">L</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold tracking-widest">MØKON</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-serif italic">Théo</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">
+                        <span class="block text-center">LU</span>
+                        <span class="block text-center -mt-2">SU</span>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-xl md:text-2xl tracking-widest font-light">hansen</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">BRAND</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-light">Company</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold tracking-wide">TECH</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-bold">STARTUP</div>
+                </div>
+                <div class="brand-item">
+                    <div class="text-brand-navy text-2xl md:text-3xl font-light tracking-wide">innovation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Section -->
      <Footer id="footer" class="bg-brand-navy pt-20 pb-5 relative">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
@@ -1269,7 +1357,7 @@
                 <div class="text-left">
                     <h4 class="text-white font-montserrat font-bold text-lg mb-4">Event Date</h4>
                     <div class="mb-4">
-                        <p class="text-white/90 font-montserrat font-semibold text-base">May 3, 2025</p>
+                        <p class="text-white/90 font-montserrat font-semibold text-base">May 2, 2026</p>
                         <p class="text-white/80 font-montserrat text-sm">9:00 AM - 6:00 PM</p>
                         <p class="text-white/80 font-montserrat text-sm">Ogbomoso Innovation Hub</p>
                     </div>
@@ -1310,7 +1398,7 @@
         </div>
 
      </Footer>
-    </section>
+
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
@@ -1354,8 +1442,7 @@
 
     <!-- Countdown Timer Script -->
     <script>
-        // Set the date we're counting down to (May 3, 2025)
-        const countDownDate = new Date("May 3, 2025 09:00:00").getTime();
+        const countDownDate = new Date("May 2, 2026 09:00:00").getTime();
 
         // Update the count down every 1 second
         const countdownFunction = setInterval(function() {

@@ -1,0 +1,1435 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>
+            Register - Ogbomoso Ignite 2026 | Technology & Entrepreneurship
+            Conference
+        </title>
+        <meta
+            name="title"
+            content="Register - Ogbomoso Ignite 2026 | Technology & Entrepreneurship Conference"
+        />
+        <meta
+            name="description"
+            content="Register for Ogbomoso Ignite 2026, the premier technology and entrepreneurship conference in Nigeria. Secure your spot at this transformative event."
+        />
+        <meta
+            name="keywords"
+            content="register, Ogbomoso Ignite, technology conference, entrepreneurship, Nigeria conference, event registration, tech entrepreneurs"
+        />
+        <meta name="author" content="Ogbomoso Ignite" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://ogbomosoignite.com/register.html"
+        />
+        <meta
+            property="og:title"
+            content="Register - Ogbomoso Ignite 2026 | Technology & Entrepreneurship Conference"
+        />
+        <meta
+            property="og:description"
+            content="Register for Ogbomoso Ignite 2026, the premier technology and entrepreneurship conference in Nigeria. Secure your spot at this transformative event."
+        />
+        <meta
+            property="og:image"
+            content="https://ogbomosoignite.com/assets/images/og-image.jpg"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:url"
+            content="https://ogbomosoignite.com/register.html"
+        />
+        <meta
+            property="twitter:title"
+            content="Register - Ogbomoso Ignite 2026"
+        />
+        <meta
+            property="twitter:description"
+            content="Register for Ogbomoso Ignite 2026, the premier technology and entrepreneurship conference in Nigeria."
+        />
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#ff6b35" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+        <!-- Framer Motion -->
+        <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.js"></script>
+    </head>
+
+    <body>
+        <section>
+            <!-- Navigation -->
+            <nav
+                id="navbar"
+                class="hero-content relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-4"
+            >
+                <!--<div class="text-white text-2xl md:text-3xl font-bold">The Grid.</div>-->
+                <!-- Dynamic Logo - White for hero, Colored for scrolled -->
+                <a
+                    href="index.html"
+                    class="relative w-24 md:w-32 transition-opacity duration-300"
+                >
+                    <img
+                        id="navbarLogoWhite"
+                        src="assets/images/navbar-logo.png"
+                        alt="The Grid Logo"
+                        class="w-24 md:w-32 transition-opacity duration-300" />
+                    <img
+                        id="navbarLogoColored"
+                        src="assets/images/navbar-logo.png"
+                        alt="The Grid Logo"
+                        class="w-24 md:w-32 absolute top-0 left-0 opacity-0 transition-opacity duration-300"
+                /></a>
+                <ul
+                    id="navbarMenu"
+                    class="hidden md:flex space-x-8 lg:space-x-12 text-brand-navy font-montserrat transition-colors duration-300"
+                >
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            data-section="about"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            data-section="speakers"
+                            >Speakers</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            data-section="schedule"
+                            >Schedule</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            data-section="volunteer"
+                            >Volunteer</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            data-section="partnership"
+                            >Partnership</a
+                        >
+                    </li>
+                </ul>
+
+                <a
+                    href="register.html"
+                    id="navbarRegisterBtn"
+                    class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat"
+                    >Register Now</a
+                >
+
+                <!-- Mobile Menu Button with Hamburger to X Animation -->
+                <button
+                    class="md:hidden text-white transition-colors duration-300 relative w-8 h-8 flex items-center justify-center"
+                    id="mobileMenuBtn"
+                >
+                    <div class="hamburger-lines">
+                        <span class="hamburger-line hamburger-line-1"></span>
+                        <span class="hamburger-line hamburger-line-2"></span>
+                        <span class="hamburger-line hamburger-line-3"></span>
+                    </div>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center"
+            >
+                <ul
+                    class="flex flex-col space-y-8 text-white text-xl text-center font-montserrat"
+                >
+                    <li>
+                        <a
+                            href="index.html"
+                            class="mobile-nav-link"
+                            data-section="about"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="mobile-nav-link"
+                            data-section="speakers"
+                            >Speakers</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="mobile-nav-link"
+                            data-section="schedule"
+                            >Schedule</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="mobile-nav-link"
+                            data-section="volunteer"
+                            >Volunteer</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html"
+                            class="mobile-nav-link"
+                            data-section="partnership"
+                            >Partnership</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <!-- Hero Section - 1/3 Height -->
+            <div
+                class="h-[33vh] min-h-[300px] bg-gradient-navy relative flex items-center justify-center px-6 md:px-12 lg:px-20"
+            >
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center mb-6">
+                        <h1
+                            class="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white"
+                        >
+                            Event Registration
+                        </h1>
+                    </div>
+                    <p
+                        class="text-lg md:text-xl text-white font-montserrat font-medium max-w-2xl mx-auto"
+                    >
+                        Join us for Ogbomoso Ignite 2026 - where technology
+                        meets entrepreneurship
+                    </p>
+                    <p
+                        class="text-sm md:text-base text-white opacity-90 font-montserrat mt-2"
+                    >
+                        May 2, 2026 • Ogbomoso Innovation Hub, Nigeria
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="bg-white py-16 md:py-20">
+            <div class="max-w-4xl mx-auto px-6 md:px-12 lg:px-20">
+                <!-- Form Header -->
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-brand-navy mb-4"
+                    >
+                        Secure Your Spot
+                    </h2>
+                    <p
+                        class="text-lg text-brand-navy opacity-80 font-montserrat max-w-2xl mx-auto"
+                    >
+                        Fill out the form below to register for Ogbomoso Ignite
+                        2026. All fields marked with * are required.
+                    </p>
+                </div>
+
+                <!-- Registration Form -->
+                <form
+                    id="registrationForm"
+                    class="space-y-6 shadow-lg p-6 rounded-lg bg-white/10 backdrop-blur-sm"
+                >
+                    <!-- Personal Information -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Personal Information
+                        </h4>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label
+                                    for="firstName"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >First Name *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Enter your first name"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    for="lastName"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Last Name *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Enter your last name"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Email Address *</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="your.email@example.com"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    for="phone"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Phone Number *</label
+                                >
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="+234 xxx xxx xxxx"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label
+                                    for="gender"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Gender *</label
+                                >
+                                <select
+                                    id="gender"
+                                    name="gender"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                >
+                                    <option value="" class="text-neutral-900">
+                                        Select your gender
+                                    </option>
+                                    <option
+                                        value="male"
+                                        class="text-neutral-900"
+                                    >
+                                        Male
+                                    </option>
+                                    <option
+                                        value="female"
+                                        class="text-neutral-900"
+                                    >
+                                        Female
+                                    </option>
+                                    <option
+                                        value="prefer-not-to-say"
+                                        class="text-neutral-900"
+                                    >
+                                        Prefer not to say
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="city"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >City/State *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="e.g. Lagos, Nigeria"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Participant Category -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Participant Category
+                        </h4>
+                        <div>
+                            <label
+                                class="block text-brand-navy font-montserrat font-medium mb-4"
+                                >You are registering as (Select up to 3)
+                                *</label
+                            >
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="student"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Student</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="aspiring-entrepreneur"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Aspiring Entrepreneur</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="startup-founder"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Startup Founder</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="business-owner"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Business Owner/SME</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="tech-professional"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Tech Professional</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="corporate-professional"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Corporate Professional</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer md:col-span-2"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="participantCategory"
+                                        value="government-ngo"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Government/NGO Representative</span
+                                    >
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Organization/School Details -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Organization/School Details
+                        </h4>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label
+                                    for="organizationName"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Organization/School Name *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="organizationName"
+                                    name="organizationName"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Enter your organization or school name"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    for="role"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >Role/Course of Study *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="role"
+                                    name="role"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Your current role or course of study"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                for="experience"
+                                class="block text-brand-navy font-montserrat font-medium mb-2"
+                                >Years of Experience (Optional)</label
+                            >
+                            <select
+                                id="experience"
+                                name="experience"
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                            >
+                                <option value="" class="text-neutral-900">
+                                    Select experience level
+                                </option>
+                                <option value="0-1" class="text-neutral-900">
+                                    0-1 years
+                                </option>
+                                <option value="2-3" class="text-neutral-900">
+                                    2-3 years
+                                </option>
+                                <option value="4-5" class="text-neutral-900">
+                                    4-5 years
+                                </option>
+                                <option value="6-10" class="text-neutral-900">
+                                    6-10 years
+                                </option>
+                                <option value="10+" class="text-neutral-900">
+                                    10+ years
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Interest Areas -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Interest Areas
+                        </h4>
+                        <div>
+                            <label
+                                class="block text-brand-navy font-montserrat font-medium mb-4"
+                                >Which sessions are you most interested in?
+                                (Multiple selections allowed) *</label
+                            >
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="technology-digital-skills"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Technology & Digital Skills</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="entrepreneurship-business-growth"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Entrepreneurship & Business
+                                        Growth</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="startup-funding-pitching"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Startup Funding & Pitching</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="tax-education"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Tax Education</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="business-compliance"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Business Compliance & Regulation</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="marketing-sales"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Marketing & Sales</span
+                                    >
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded-lg border border-brand-navy/20 hover:bg-brand-orange/5 cursor-pointer md:col-span-2"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="interestAreas"
+                                        value="career-development"
+                                        class="mr-3 accent-brand-orange"
+                                    />
+                                    <span
+                                        class="text-brand-navy font-montserrat"
+                                        >Career Development</span
+                                    >
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Participation -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Event Participation
+                        </h4>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label
+                                    class="block text-brand-navy font-montserrat font-medium mb-4"
+                                    >Will you attend the full event on May 2,
+                                    2026? *</label
+                                >
+                                <div class="flex gap-4">
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="fullAttendance"
+                                            value="yes"
+                                            required
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >Yes</span
+                                        >
+                                    </label>
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="fullAttendance"
+                                            value="no"
+                                            required
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >No</span
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="hearAbout"
+                                    class="block text-brand-navy font-montserrat font-medium mb-2"
+                                    >How did you hear about this event? *</label
+                                >
+                                <select
+                                    id="hearAbout"
+                                    name="hearAbout"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                >
+                                    <option value="" class="text-neutral-900">
+                                        Select an option
+                                    </option>
+                                    <option
+                                        value="social-media"
+                                        class="text-neutral-900"
+                                    >
+                                        Social Media
+                                    </option>
+                                    <option
+                                        value="friend-referral"
+                                        class="text-neutral-900"
+                                    >
+                                        Friend/Referral
+                                    </option>
+                                    <option
+                                        value="school-organization"
+                                        class="text-neutral-900"
+                                    >
+                                        School/Organization
+                                    </option>
+                                    <option
+                                        value="sponsor-partner"
+                                        class="text-neutral-900"
+                                    >
+                                        Sponsor/Partner
+                                    </option>
+                                    <option
+                                        value="other"
+                                        class="text-neutral-900"
+                                    >
+                                        Other
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div>
+                        <h4
+                            class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
+                        >
+                            Special Requests
+                        </h4>
+
+                        <div class="space-y-6">
+                            <div class="accessibility-container">
+                                <label
+                                    class="block text-brand-navy font-montserrat font-medium mb-4"
+                                    >Do you have any accessibility or special
+                                    needs?</label
+                                >
+                                <div class="flex gap-4 mb-4">
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="accessibility"
+                                            value="yes"
+                                            class="mr-2 accent-brand-orange"
+                                            id="accessibilityYes"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >Yes (Please specify)</span
+                                        >
+                                    </label>
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="accessibility"
+                                            value="no"
+                                            class="mr-2 accent-brand-orange"
+                                            id="accessibilityNo"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >No</span
+                                        >
+                                    </label>
+                                </div>
+                                <div class="accessibility-details-wrapper">
+                                    <textarea
+                                        id="accessibilityDetails"
+                                        name="accessibilityDetails"
+                                        rows="3"
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Please specify your accessibility needs..."
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-brand-navy font-montserrat font-medium mb-4"
+                                    >Would you like to pitch a startup
+                                    idea?</label
+                                >
+                                <div class="flex gap-4">
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="pitchStartup"
+                                            value="yes"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >Yes</span
+                                        >
+                                    </label>
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="pitchStartup"
+                                            value="no"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >No</span
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-brand-navy font-montserrat font-medium mb-4"
+                                    >Would you like to receive post-event
+                                    mentorship?</label
+                                >
+                                <div class="flex gap-4">
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="mentorship"
+                                            value="yes"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >Yes</span
+                                        >
+                                    </label>
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="mentorship"
+                                            value="no"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >No</span
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-brand-navy font-montserrat font-medium mb-4"
+                                    >Would you like to join our community after
+                                    the event?</label
+                                >
+                                <div class="flex gap-4">
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="joinCommunity"
+                                            value="yes"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >Yes</span
+                                        >
+                                    </label>
+                                    <label
+                                        class="flex items-center cursor-pointer"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="joinCommunity"
+                                            value="no"
+                                            class="mr-2 accent-brand-orange"
+                                        />
+                                        <span
+                                            class="text-brand-navy font-montserrat"
+                                            >No</span
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Confirmation -->
+                    <div>
+                        <div class="space-y-1 mt-4">
+                            <label class="flex items-start cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    name="agreeUpdates"
+                                    required
+                                    class="mr-3 mt-1 accent-brand-orange"
+                                />
+                                <span class="text-brand-navy font-montserrat"
+                                    >I agree to receive event updates and
+                                    communications *</span
+                                >
+                            </label>
+                            <label class="flex items-start cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    name="physicalEvent"
+                                    required
+                                    class="mr-3 mt-1 accent-brand-orange"
+                                />
+                                <span class="text-brand-navy font-montserrat"
+                                    >I understand this is a physical event and I
+                                    will attend responsibly *</span
+                                >
+                            </label>
+                        </div>
+                    </div>
+
+                    <p
+                        class="text-sm text-brand-navy text-italic opacity-70 font-montserrat mt-8 max-w-2xl mx-auto"
+                    >
+                        Your information will be kept confidential and used only
+                        for event communication and planning.
+                    </p>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-8">
+                        <button
+                            type="submit"
+                            class="btn-primary-ignite px-12 py-4 text-lg font-montserrat rounded-lg font-semibold"
+                        >
+                            Register for the Event
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Additional Info -->
+                <div class="mt-16 text-center">
+                    <div
+                        class="bg-brand-navy-light rounded-lg p-8 max-w-2xl mx-auto"
+                    >
+                        <h3
+                            class="text-xl md:text-2xl font-montserrat font-bold text-white mb-4"
+                        >
+                            Join Our Community
+                        </h3>
+                        <p class="text-white opacity-90 font-montserrat mb-6">
+                            Connect with fellow participants and stay updated
+                            with the latest event information.
+                        </p>
+                        <a
+                            href="https://chat.whatsapp.com/IV3NhSWZIzTA3kXw5Q5JEy?mode=gi_c"
+                            target="_blank"
+                            class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.108"
+                                />
+                            </svg>
+                            Join WhatsApp Group
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Footer Section -->
+        <footer id="footer" class="bg-brand-navy pt-20 pb-5 relative">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                <!-- Footer Main Content -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"
+                >
+                    <!-- Logo & Description -->
+                    <div class="lg:col-span-1 text-left">
+                        <div class="flex justify-start mb-4">
+                            <img
+                                src="assets/images/navbar-logo-w.png"
+                                alt="OTEI Logo"
+                                class="h-16 md:h-20"
+                            />
+                        </div>
+                        <p
+                            class="text-white/80 text-sm leading-relaxed font-montserrat"
+                        >
+                            Empowering the next generation of tech entrepreneurs
+                            and innovators in Ogbomoso and beyond.
+                        </p>
+                    </div>
+
+                    <!-- Quick Navigation -->
+                    <div class="text-left">
+                        <h4
+                            class="text-white font-montserrat font-bold text-lg mb-4"
+                        >
+                            Quick Links
+                        </h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat"
+                                    >About Event</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#speakers"
+                                    class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat"
+                                    >Speakers</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#schedule"
+                                    class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat"
+                                    >Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#partnership"
+                                    class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat"
+                                    >Partnership</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#register"
+                                    class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat"
+                                    >Register</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media & Contact -->
+                    <div class="text-left">
+                        <h4
+                            class="text-white font-montserrat font-bold text-lg mb-4"
+                        >
+                            Connect With Us
+                        </h4>
+
+                        <!-- Social Icons -->
+                        <div class="flex justify-start space-x-4 mb-6">
+                            <a
+                                href="#"
+                                class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.755 6.158 6.158 6.158 3.403 0 6.158-2.755 6.158-6.158 0-3.4-2.755-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.788-3.997 3.997-3.997 3.997 1.789 3.997 3.997-1.787 3.997-3.997 3.997z"
+                                    />
+                                    <path
+                                        d="M16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941C.583 3.458.16 5.124.066 7.11L.064 7.21c-.098 2.208-.093 7.677 0 9.887.091 1.942.56 3.655 1.941 5.036 1.441 1.441 3.107 1.864 5.092 1.958l.201.002c2.208.098 7.677.093 9.887 0 1.942-.091 3.655-.56 5.036-1.941 1.441-1.441 1.864-3.107 1.958-5.092l.002-.201c.098-2.208.093-7.677 0-9.887-.091-1.942-.56-3.655-1.941-5.036C20.06.615 18.394.192 16.408.098l-.201-.002C14.998.002 13.008.002 12.004.076zm2.274 2.204c.947.041 1.671.171 2.293.36.62.188 1.144.44 1.668.965.524.524.777 1.048.965 1.668.189.622.319 1.346.36 2.293.041.947.049 1.247.049 3.669s-.008 2.722-.049 3.669c-.041.947-.171 1.671-.36 2.293-.188.62-.44 1.144-.965 1.668-.524.524-1.048.777-1.668.965-.622.189-1.346.319-2.293.36-.947.041-1.247.049-3.669.049s-2.722-.008-3.669-.049c-.947-.041-1.671-.171-2.293-.36-.62-.188-1.144-.44-1.668-.965-.524-.524-.777-1.048-.965-1.668-.189-.622-.319-1.346-.36-2.293-.041-.947-.049-1.247-.049-3.669s.008-2.722.049-3.669c.041-.947.171-1.671.36-2.293.188-.62.44-1.144.965-1.668.524-.524 1.048-.777 1.668-.965.622-.189 1.346-.319 2.293-.36.947-.041 1.247-.049 3.669-.049s2.722.008 3.669.049z"
+                                    />
+                                    <path
+                                        d="M18.406 5.594c0 .8-.65 1.45-1.45 1.45s-1.45-.65-1.45-1.45.65-1.45 1.45-1.45 1.45.65 1.45 1.45z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="space-y-2">
+                            <p class="text-white/80 text-sm font-montserrat">
+                                <span class="text-brand-orange">Email:</span>
+                                info@otei.com.ng
+                            </p>
+                            <p class="text-white/80 text-sm font-montserrat">
+                                <span class="text-brand-orange">Phone:</span>
+                                +234 801 234 5678
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event Info & Countdown -->
+                    <div class="text-left">
+                        <h4
+                            class="text-white font-montserrat font-bold text-lg mb-4"
+                        >
+                            Event Date
+                        </h4>
+                        <div class="mb-4">
+                            <p
+                                class="text-white/90 font-montserrat font-semibold text-base"
+                            >
+                                May 2, 2026
+                            </p>
+                            <p class="text-white/80 font-montserrat text-sm">
+                                9:00 AM - 6:00 PM
+                            </p>
+                            <p class="text-white/80 font-montserrat text-sm">
+                                Ogbomoso Innovation Hub
+                            </p>
+                        </div>
+
+                        <!-- Countdown Timer -->
+                        <div
+                            class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                        >
+                            <p
+                                class="text-white font-montserrat text-xs mb-2 uppercase tracking-wide"
+                            >
+                                Countdown
+                            </p>
+                            <div
+                                id="countdown"
+                                class="grid grid-cols-4 gap-1 text-center"
+                            >
+                                <div>
+                                    <div
+                                        id="days"
+                                        class="text-brand-orange font-bold text-lg md:text-xl"
+                                    >
+                                        000
+                                    </div>
+                                    <div
+                                        class="text-white/80 text-xs font-montserrat"
+                                    >
+                                        Days
+                                    </div>
+                                </div>
+                                <div>
+                                    <div
+                                        id="hours"
+                                        class="text-brand-orange font-bold text-lg md:text-xl"
+                                    >
+                                        00
+                                    </div>
+                                    <div
+                                        class="text-white/80 text-xs font-montserrat"
+                                    >
+                                        Hours
+                                    </div>
+                                </div>
+                                <div>
+                                    <div
+                                        id="minutes"
+                                        class="text-brand-orange font-bold text-lg md:text-xl"
+                                    >
+                                        00
+                                    </div>
+                                    <div
+                                        class="text-white/80 text-xs font-montserrat"
+                                    >
+                                        Mins
+                                    </div>
+                                </div>
+                                <div>
+                                    <div
+                                        id="seconds"
+                                        class="text-brand-orange font-bold text-lg md:text-xl"
+                                    >
+                                        00
+                                    </div>
+                                    <div
+                                        class="text-white/80 text-xs font-montserrat"
+                                    >
+                                        Secs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="border-t border-white/20 pt-8">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+                    >
+                        <div
+                            class="text-white/80 text-sm font-montserrat text-center md:text-left"
+                        >
+                            &copy; 2026 Ogbomoso Tech & Entrepreneurship Ignite.
+                            All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom JavaScript -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Ultra Simple Toggle Script -->
+        <script>
+            function showForm(formType) {
+                // Get elements
+                const sponsorBtn = document.getElementById("sponsorshipTab");
+                const exhibitionBtn = document.getElementById("exhibitionTab");
+                const sponsorForm = document.getElementById("sponsorshipForm");
+                const exhibitionForm =
+                    document.getElementById("exhibitionForm");
+
+                // Reset all buttons - direct style manipulation
+                sponsorBtn.style.backgroundColor = "transparent";
+                sponsorBtn.style.color = "#0b1426";
+                exhibitionBtn.style.backgroundColor = "transparent";
+                exhibitionBtn.style.color = "#0b1426";
+
+                // Hide all forms
+                sponsorForm.style.display = "none";
+                exhibitionForm.style.display = "none";
+
+                // Show selected form and activate button
+                if (formType === "sponsor") {
+                    sponsorBtn.style.backgroundColor = "#0b1426";
+                    sponsorBtn.style.color = "white";
+                    sponsorForm.style.display = "block";
+                } else if (formType === "exhibition") {
+                    exhibitionBtn.style.backgroundColor = "#0b1426";
+                    exhibitionBtn.style.color = "white";
+                    exhibitionForm.style.display = "block";
+                }
+            }
+
+            // Initialize when page loads
+            window.onload = function () {
+                showForm("sponsor");
+            };
+        </script>
+
+        <!-- Countdown Timer Script -->
+        <script>
+            const countDownDate = new Date("May 2, 2026 09:00:00").getTime();
+
+            // Update the count down every 1 second
+            const countdownFunction = setInterval(function () {
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+                );
+                const minutes = Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60),
+                );
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the elements with respective ids
+                document.getElementById("days").innerHTML = String(
+                    days,
+                ).padStart(3, "0");
+                document.getElementById("hours").innerHTML = String(
+                    hours,
+                ).padStart(2, "0");
+                document.getElementById("minutes").innerHTML = String(
+                    minutes,
+                ).padStart(2, "0");
+                document.getElementById("seconds").innerHTML = String(
+                    seconds,
+                ).padStart(2, "0");
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById("countdown").innerHTML =
+                        "<div class='text-brand-orange font-bold text-lg'>EVENT STARTED!</div>";
+                }
+            }, 1000);
+        </script>
+
+        <!-- Navigation Dot Tooltips Enhancement Script -->
+        <script>
+            // Add click functionality to navigation dots
+            document.addEventListener("DOMContentLoaded", function () {
+                const navDots = document.querySelectorAll("[data-nav]");
+
+                navDots.forEach((dot) => {
+                    dot.addEventListener("click", function () {
+                        const targetSection = this.getAttribute("data-nav");
+                        const targetElement =
+                            document.getElementById(targetSection);
+
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                            });
+                        }
+                    });
+
+                    // Add cursor pointer style
+                    dot.style.cursor = "pointer";
+                });
+            });
+        </script>
+    </body>
+</html>
