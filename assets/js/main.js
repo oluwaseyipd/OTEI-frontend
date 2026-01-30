@@ -73,13 +73,15 @@ window.addEventListener("scroll", () => {
         navDots.forEach((d) => d.classList.remove("active"));
         navDots[index].classList.add("active");
 
-        // Update nav links
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          link.classList.remove("text-red-600", "font-medium");
-          if (link.dataset.section === sectionId) {
-            link.classList.add("text-red-600", "font-medium");
-          }
-        });
+        // Update nav links (desktop and mobile)
+        document
+          .querySelectorAll(".nav-link, .mobile-nav-link")
+          .forEach((link) => {
+            link.classList.remove("active");
+            if (link.dataset.section === sectionId) {
+              link.classList.add("active");
+            }
+          });
       }
     }
   });
@@ -133,6 +135,20 @@ window.addEventListener("scroll", () => {
       document.body.classList.remove("navbar-fixed-active");
     }
   }
+});
+
+// Floating Shapes Navigation
+document.querySelectorAll(".floating-shape[data-nav]").forEach((shape) => {
+  shape.addEventListener("click", function () {
+    const targetSection = this.dataset.nav;
+    const section = document.getElementById(targetSection);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
 });
 
 // Framer Motion Animations

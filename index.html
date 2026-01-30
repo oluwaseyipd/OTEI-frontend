@@ -103,29 +103,51 @@
     <section id="home" class="min-h-screen relative">
         <!-- Fixed Background - only for hero section -->
         <div id="heroBackground" class="hero-bg fixed inset-0 min-h-screen z-0">
-            <!-- Animated Background Shapes -->
-            <div class="shape shape-1" data-nav="about">
+            <!-- Animated Background Shapes - 10 Dynamic Image Shapes -->
+            <div class="floating-shape floating-shape-1" data-nav="about">
+                <img src="assets/images/shapes/shape-1.png" alt="Shape">
                 <div class="nav-tooltip">About</div>
             </div>
-            <div class="shape shape-2" data-nav="speakers">
+            <div class="floating-shape floating-shape-2" data-nav="speakers">
+                <img src="assets/images/shapes/shape-3.png" alt="Shape">
                 <div class="nav-tooltip">Speakers</div>
             </div>
-            <div class="shape shape-3" data-nav="schedule">
+            <div class="floating-shape floating-shape-3" data-nav="schedule">
+                <img src="assets/images/shapes/shape-1.png" alt="Shape">
                 <div class="nav-tooltip">Schedule</div>
             </div>
-            <div class="shape shape-4" data-nav="volunteer">
+            <div class="floating-shape floating-shape-4" data-nav="volunteer">
+                <img src="assets/images/shapes/shape-3.png" alt="Shape">
                 <div class="nav-tooltip">Volunteer</div>
             </div>
-            <div class="shape shape-5" data-nav="partnership">
+            <div class="floating-shape floating-shape-5" data-nav="partnership">
+                <img src="assets/images/shapes/shape-1.png" alt="Shape">
                 <div class="nav-tooltip">Partnership</div>
+            </div>
+            <div class="floating-shape floating-shape-6">
+                <img src="assets/images/shapes/shape-3.png" alt="Shape">
+            </div>
+            <div class="floating-shape floating-shape-7">
+                <img src="assets/images/shapes/shape-1.png" alt="Shape">
+            </div>
+            <div class="floating-shape floating-shape-8">
+                <img src="assets/images/shapes/shape-3.png" alt="Shape">
+            </div>
+            <div class="floating-shape floating-shape-9">
+                <img src="assets/images/shapes/shape-1.png" alt="Shape">
+            </div>
+            <div class="floating-shape floating-shape-10">
+                <img src="assets/images/shapes/shape-3.png" alt="Shape">
             </div>
         </div>
 
         <!-- Navigation -->
-        <nav id="navbar" class="hero-content relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-8">
+        <nav id="navbar" class="hero-content relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-4">
             <!--<div class="text-white text-2xl md:text-3xl font-bold">The Grid.</div>-->
-            <img src="assets/images/navbar-logo.png" alt="The Grid Logo" class="w-24 md:w-32">
-            <ul class="hidden md:flex space-x-8 lg:space-x-12 text-white font-montserrat">
+            <!-- Dynamic Logo - White for hero, Colored for scrolled -->
+            <img id="navbarLogoWhite" src="assets/images/navbar-logo-w.png" alt="The Grid Logo" class="w-24 md:w-32 transition-opacity duration-300">
+            <img id="navbarLogoColored" src="assets/images/navbar-logo.png" alt="The Grid Logo" class="w-24 md:w-32 absolute opacity-0 transition-opacity duration-300">
+            <ul id="navbarMenu" class="hidden md:flex space-x-8 lg:space-x-12 text-white font-montserrat transition-colors duration-300">
                 <li><a href="#about" class="nav-link hover:text-brand-orange transition-colors" data-section="about">About</a></li>
                 <li><a href="#speakers" class="nav-link hover:text-brand-orange transition-colors" data-section="speakers">Speakers</a></li>
                 <li><a href="#schedule" class="nav-link hover:text-brand-orange transition-colors" data-section="schedule">Schedule</a></li>
@@ -133,10 +155,10 @@
                 <li><a href="#partnership" class="nav-link hover:text-brand-orange transition-colors" data-section="partnership">Partnership</a></li>
             </ul>
 
-            <a href="#" class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat">Register Now</a>
+            <a href="#" id="navbarRegisterBtn" class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat">Register Now</a>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white" id="mobileMenuBtn">
+            <button class="md:hidden text-white transition-colors duration-300" id="mobileMenuBtn">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -147,11 +169,11 @@
         <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center">
             <button class="absolute top-8 right-6 text-white text-3xl font-montserrat" id="closeMobileMenu">&times;</button>
             <ul class="flex flex-col space-y-8 text-white text-xl text-center font-montserrat">
-                <li><a href="#about" class="text-brand-orange font-medium mobile-nav-link">About</a></li>
-                <li><a href="#speakers" class="mobile-nav-link">Speakers</a></li>
-                <li><a href="#schedule" class="mobile-nav-link">Schedule</a></li>
-                <li><a href="#volunteer" class="mobile-nav-link">Volunteer</a></li>
-                <li><a href="#partnership" class="mobile-nav-link">Partnership</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
+                <li><a href="#speakers" class="mobile-nav-link" data-section="speakers">Speakers</a></li>
+                <li><a href="#schedule" class="mobile-nav-link" data-section="schedule">Schedule</a></li>
+                <li><a href="#volunteer" class="mobile-nav-link" data-section="volunteer">Volunteer</a></li>
+                <li><a href="#partnership" class="mobile-nav-link" data-section="partnership">Partnership</a></li>
             </ul>
         </div>
 
@@ -159,7 +181,7 @@
         <div class="hero-content relative z-10 flex items-center justify-center min-h-[calc(100vh-120px)] px-6 md:px-12 lg:px-20">
             <div class="flex flex-col md:flex-row items-center md:items-end text-center space-y-12 md:space-y-0 space-x-12 md:space-x-20">
                 <div class="flex flex-col items-start mb-10 md:mb-0">
-                    <p class="text-white text-sm md:text-base font-montserrat font-semibold tracking-wider mb-6 uppercase">Technology & Entrepreneurship Conference</p>
+                    <p class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-6 uppercase">Technology & Entrepreneurship Conference</p>
                     <div class="flex items-start">
                         <div class="w-1 md:w-3 bg-white h-20 md:h-80 mr-6 md:mr-8"></div>
                         <h2 class="hero-title text-white font-montserrat text-start">
