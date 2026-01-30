@@ -104,12 +104,21 @@
         <!-- Fixed Background - only for hero section -->
         <div id="heroBackground" class="hero-bg fixed inset-0 min-h-screen z-0">
             <!-- Animated Background Shapes -->
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-            <div class="shape shape-6"></div>
+            <div class="shape shape-1" data-nav="about">
+                <div class="nav-tooltip">About</div>
+            </div>
+            <div class="shape shape-2" data-nav="speakers">
+                <div class="nav-tooltip">Speakers</div>
+            </div>
+            <div class="shape shape-3" data-nav="schedule">
+                <div class="nav-tooltip">Schedule</div>
+            </div>
+            <div class="shape shape-4" data-nav="volunteer">
+                <div class="nav-tooltip">Volunteer</div>
+            </div>
+            <div class="shape shape-5" data-nav="partnership">
+                <div class="nav-tooltip">Partnership</div>
+            </div>
         </div>
 
         <!-- Navigation -->
@@ -121,8 +130,7 @@
                 <li><a href="#speakers" class="nav-link hover:text-brand-orange transition-colors" data-section="speakers">Speakers</a></li>
                 <li><a href="#schedule" class="nav-link hover:text-brand-orange transition-colors" data-section="schedule">Schedule</a></li>
                 <li><a href="#volunteer" class="nav-link hover:text-brand-orange transition-colors" data-section="volunteer">Volunteer</a></li>
-                <li><a href="#sponsors" class="nav-link hover:text-brand-orange transition-colors" data-section="sponsors">Sponsors</a></li>
-                <li><a href="#venue" class="nav-link hover:text-brand-orange transition-colors" data-section="venue">Venue</a></li>
+                <li><a href="#partnership" class="nav-link hover:text-brand-orange transition-colors" data-section="partnership">Partnership</a></li>
             </ul>
 
             <a href="#" class="hidden md:block btn-primary-ignite px-6 py-3 rounded-md font-montserrat">Register Now</a>
@@ -143,8 +151,7 @@
                 <li><a href="#speakers" class="mobile-nav-link">Speakers</a></li>
                 <li><a href="#schedule" class="mobile-nav-link">Schedule</a></li>
                 <li><a href="#volunteer" class="mobile-nav-link">Volunteer</a></li>
-                <li><a href="#sponsors" class="mobile-nav-link">Sponsors</a></li>
-                <li><a href="#venue" class="mobile-nav-link">Venue</a></li>
+                <li><a href="#partnership" class="mobile-nav-link">Partnership</a></li>
             </ul>
         </div>
 
@@ -155,7 +162,7 @@
                     <p class="text-white text-sm md:text-base font-montserrat font-semibold tracking-wider mb-6 uppercase">Technology & Entrepreneurship Conference</p>
                     <div class="flex items-start">
                         <div class="w-1 md:w-3 bg-white h-20 md:h-80 mr-6 md:mr-8"></div>
-                        <h2 class="hero-title text-white font-montserrat">
+                        <h2 class="hero-title text-white font-montserrat text-start">
                             Ogbomoso<br>Ignite
                         </h2>
                     </div>
@@ -167,7 +174,7 @@
                         <p class="text-sm md:text-base">Ogbomoso Innovation Hub, Nigeria</p>
                     </div>
 
-                    <button class="btn-primary-ignite px-10 py-4 text-base md:text-lg rounded-md font-montserrat transition-all duration-300 transform hover:scale-105">
+                    <button class="btn-primary-ignite px-10 py-4 text-base md:text-lg rounded-md font-montserrat transition-all duration-300 transform">
                         Register Now
                     </button>
                 </div>
@@ -476,225 +483,189 @@
                     <div class="w-1 md:w-1.5 bg-gradient-ignite h-16 md:h-20 ml-6 md:ml-8"></div>
                 </div>
                 <p class="text-lg md:text-xl text-neutral-700 font-montserrat max-w-3xl mx-auto leading-relaxed">
-                    Join the passionate team behind Ogbomoso Ignite and help create an unforgettable experience for innovators and entrepreneurs. Your contribution will spark the future of African innovation.
+                    Join the passionate team behind Ogbomoso Tech & Entrepreneurship Ignite 2026.
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                <!-- Left Column - Benefits -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-brand-navy mb-6">Why Volunteer with Us?</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 bg-gradient-ignite rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-montserrat font-semibold text-brand-navy mb-2">Network with Industry Leaders</h4>
-                                    <p class="text-neutral-700 font-montserrat">Connect directly with speakers, entrepreneurs, and tech innovators from across Africa.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 bg-gradient-ignite rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-montserrat font-semibold text-brand-navy mb-2">Gain Valuable Experience</h4>
-                                    <p class="text-neutral-700 font-montserrat">Develop skills in event management, tech conference operations, and professional networking.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 bg-gradient-ignite rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-montserrat font-semibold text-brand-navy mb-2">Official Recognition</h4>
-                                    <p class="text-neutral-700 font-montserrat">Receive certificates, volunteer badges, and exclusive access to post-event networking sessions.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 bg-gradient-ignite rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-montserrat font-semibold text-brand-navy mb-2">Make an Impact</h4>
-                                    <p class="text-neutral-700 font-montserrat">Be part of building Nigeria's premier technology and entrepreneurship ecosystem.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column - Volunteer Form -->
-                <div class="bg-gradient-to-br from-brand-navy to-brand-navy-light p-8 md:p-10 rounded-2xl shadow-brand-lg">
+            <!-- Volunteer Form - Full Width -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-brand-navy to-brand-navy-light p-8 md:p-12 rounded-2xl shadow-brand-lg">
                     <div class="text-center mb-8">
-                        <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-white mb-4">Join Our Volunteer Team</h3>
-                        <p class="text-white/80 font-montserrat">Fill out the form below and we'll get back to you within 48 hours.</p>
+                        <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-brand-navy mb-4">Join Our Volunteer Team</h3>
+                        <p class="text-brand-navy font-montserrat">Fill out the form below and we'll get back to you within 48 hours.</p>
                     </div>
 
                     <form id="volunteerForm" class="space-y-6">
                         <!-- Personal Information -->
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Personal Information</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="fullName" class="block text-brand-navy font-montserrat font-medium mb-2">Full Name *</label>
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Enter your full name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="ageRange" class="block text-brand-navy font-montserrat font-medium mb-2">Age Range *</label>
+                                    <select
+                                        id="ageRange"
+                                        name="ageRange"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    >
+                                        <option value="" class="text-neutral-900">Select age range</option>
+                                        <option value="under-18" class="text-neutral-900">Under 18</option>
+                                        <option value="18-25" class="text-neutral-900">18-25</option>
+                                        <option value="26-35" class="text-neutral-900">26-35</option>
+                                        <option value="36+" class="text-neutral-900">36+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="email" class="block text-brand-navy font-montserrat font-medium mb-2">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="your@email.com"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="block text-brand-navy font-montserrat font-medium mb-2">Phone Number (WhatsApp Preferably) *</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="+234 xxx xxx xxxx"
+                                    >
+                                </div>
+                            </div>
+
                             <div>
-                                <label for="firstName" class="block text-white font-montserrat font-medium mb-2">First Name *</label>
+                                <label for="location" class="block text-brand-navy font-montserrat font-medium mb-2">Location (School/Organization/City) *</label>
                                 <input
                                     type="text"
-                                    id="firstName"
-                                    name="firstName"
+                                    id="location"
+                                    name="location"
                                     required
-                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                    placeholder="Enter your first name"
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Your school, organization, or city"
                                 >
                             </div>
+                        </div>
+
+                        <!-- Skills & Interests -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Skills & Interests</h4>
+
+                            <div class="mb-4">
+                                <label for="volunteerArea" class="block text-brand-navy font-montserrat font-medium mb-2">Area you'd like to volunteer *</label>
+                                <select
+                                    id="volunteerArea"
+                                    name="volunteerArea"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                >
+                                    <option value="" class="text-neutral-900">Select preferred area</option>
+                                    <option value="registration" class="text-neutral-900">Registration & Guest Management</option>
+                                    <option value="media" class="text-neutral-900">Media, Publicity & Content Creation</option>
+                                    <option value="technical" class="text-neutral-900">Technical Support</option>
+                                    <option value="logistics" class="text-neutral-900">Logistics & Venue Setup</option>
+                                    <option value="speaker" class="text-neutral-900">Speaker & VIP Support</option>
+                                </select>
+                            </div>
+
                             <div>
-                                <label for="lastName" class="block text-white font-montserrat font-medium mb-2">Last Name *</label>
-                                <input
-                                    type="text"
-                                    id="lastName"
-                                    name="lastName"
-                                    required
-                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                    placeholder="Enter your last name"
-                                >
+                                <label for="skills" class="block text-brand-navy font-montserrat font-medium mb-2">Relevant Skills or Experience</label>
+                                <textarea
+                                    id="skills"
+                                    name="skills"
+                                    rows="3"
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
+                                    placeholder="Describe any relevant skills or experience you have..."
+                                ></textarea>
                             </div>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label for="email" class="block text-white font-montserrat font-medium mb-2">Email Address *</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                    placeholder="your@email.com"
-                                >
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-white font-montserrat font-medium mb-2">Phone Number *</label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    required
-                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                    placeholder="+234 xxx xxx xxxx"
-                                >
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="location" class="block text-white font-montserrat font-medium mb-2">Current Location *</label>
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                required
-                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                placeholder="City, State"
-                            >
-                        </div>
-
-                        <!-- Professional Information -->
-                        <div>
-                            <label for="occupation" class="block text-white font-montserrat font-medium mb-2">Current Occupation/Field of Study</label>
-                            <input
-                                type="text"
-                                id="occupation"
-                                name="occupation"
-                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                                placeholder="Student, Developer, Entrepreneur, etc."
-                            >
-                        </div>
-
-                        <!-- Volunteer Preferences -->
-                        <div>
-                            <label for="volunteerArea" class="block text-white font-montserrat font-medium mb-3">Preferred Volunteer Area *</label>
-                            <select
-                                id="volunteerArea"
-                                name="volunteerArea"
-                                required
-                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
-                            >
-                                <option value="" class="text-neutral-900">Select preferred area</option>
-                                <option value="registration" class="text-neutral-900">Registration & Check-in</option>
-                                <option value="technical" class="text-neutral-900">Technical Support</option>
-                                <option value="hospitality" class="text-neutral-900">Guest Relations & Hospitality</option>
-                                <option value="logistics" class="text-neutral-900">Event Logistics</option>
-                                <option value="marketing" class="text-neutral-900">Marketing & Social Media</option>
-                                <option value="photography" class="text-neutral-900">Photography & Documentation</option>
-                                <option value="any" class="text-neutral-900">Any area needed</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="experience" class="block text-white font-montserrat font-medium mb-2">Previous Volunteer/Event Experience</label>
-                            <textarea
-                                id="experience"
-                                name="experience"
-                                rows="3"
-                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
-                                placeholder="Briefly describe any relevant experience (optional)"
-                            ></textarea>
-                        </div>
-
-                        <div>
-                            <label for="motivation" class="block text-white font-montserrat font-medium mb-2">Why do you want to volunteer for Ogbomoso Ignite? *</label>
-                            <textarea
-                                id="motivation"
-                                name="motivation"
-                                rows="3"
-                                required
-                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
-                                placeholder="Tell us what motivates you to be part of this event..."
-                            ></textarea>
                         </div>
 
                         <!-- Availability -->
                         <div>
-                            <label class="block text-white font-montserrat font-medium mb-3">Availability *</label>
-                            <div class="space-y-2">
-                                <label class="flex items-center text-white font-montserrat">
-                                    <input type="checkbox" name="availability[]" value="pre-event" class="w-4 h-4 text-brand-orange bg-white/10 border-white/20 rounded focus:ring-brand-orange focus:ring-2">
-                                    <span class="ml-3">Pre-event setup (Day before conference)</span>
-                                </label>
-                                <label class="flex items-center text-white font-montserrat">
-                                    <input type="checkbox" name="availability[]" value="event-day" class="w-4 h-4 text-brand-orange bg-white/10 border-white/20 rounded focus:ring-brand-orange focus:ring-2">
-                                    <span class="ml-3">Event day (March 15, 2026)</span>
-                                </label>
-                                <label class="flex items-center text-white font-montserrat">
-                                    <input type="checkbox" name="availability[]" value="post-event" class="w-4 h-4 text-brand-orange bg-white/10 border-white/20 rounded focus:ring-brand-orange focus:ring-2">
-                                    <span class="ml-3">Post-event cleanup (Day after conference)</span>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Availability</h4>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-brand-navy font-montserrat font-medium mb-3">Are you available on May 2, 2026? *</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="available" value="yes" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">Yes</span>
+                                        </label>
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="available" value="no" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-brand-navy font-montserrat font-medium mb-3">Can you attend pre-event briefing? *</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="briefing" value="yes" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">Yes</span>
+                                        </label>
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="briefing" value="no" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Motivation & Confirmation -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Motivation & Confirmation</h4>
+
+                            <div class="mb-6">
+                                <label for="motivation" class="block text-brand-navy font-montserrat font-medium mb-2">Why do you want to volunteer for this event? *</label>
+                                <textarea
+                                    id="motivation"
+                                    name="motivation"
+                                    rows="3"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
+                                    placeholder="Share your motivation for volunteering (short answer)..."
+                                ></textarea>
+                            </div>
+
+                            <div>
+                                <label class="flex items-start text-brand-navy font-montserrat text-sm">
+                                    <input type="checkbox" name="terms" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2 mt-0.5 flex-shrink-0">
+                                    <span class="ml-3">I commit to volunteering responsibly if selected *</span>
                                 </label>
                             </div>
                         </div>
 
-                        <!-- Terms & Submit -->
-                        <div class="pt-4">
-                            <label class="flex items-start text-white font-montserrat text-sm">
-                                <input type="checkbox" name="terms" required class="w-4 h-4 text-brand-orange bg-white/10 border-white/20 rounded focus:ring-brand-orange focus:ring-2 mt-0.5 flex-shrink-0">
-                                <span class="ml-3">I agree to commit to my volunteer duties and understand that Ogbomoso Ignite team will contact me with further details. *</span>
-                            </label>
-                        </div>
-
                         <button
                             type="submit"
-                            class="w-full btn-primary-ignite px-8 py-4 text-lg font-montserrat rounded-lg transition-all duration-300 transform hover:scale-105 mt-8"
+                            class="w-full btn-primary-ignite px-8 py-4 text-lg font-montserrat rounded-lg transition-all duration-300 transform mt-8"
                         >
-                            Submit Volunteer Application
+                            Apply as a Volunteer
                         </button>
                     </form>
                 </div>
@@ -720,18 +691,24 @@
         </div>
     </section>
 
-    <!-- Sponsors Section -->
-    <section id="sponsors" class="bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 py-20 relative">
+    <!-- Partnership Section -->
+    <section id="partnership" class="bg-gradient-navy py-20 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-20 right-10 w-32 h-32 bg-gradient-ignite rounded-full"></div>
+            <div class="absolute bottom-40 left-20 w-24 h-24 bg-brand-navy rounded-full"></div>
+            <div class="absolute top-1/2 right-1/3 w-16 h-16 bg-brand-yellow rounded-full"></div>
+        </div>
+
+        <!-- Commented out original content -->
+        <!--
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <!-- Section Title -->
             <div class="flex items-start mb-20">
                 <div class="w-1 md:w-1.5 bg-white h-24 md:h-32 mr-6 md:mr-8"></div>
                 <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
                     Sponsors
                 </h2>
             </div>
-
-            <!-- Sponsor Logos -->
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
                 <div class="text-white text-4xl md:text-5xl font-bold border-4 border-white px-6 py-4">L</div>
                 <div class="text-white text-3xl md:text-4xl font-bold tracking-widest">MØKON</div>
@@ -743,58 +720,570 @@
                 <div class="text-white text-2xl md:text-3xl tracking-widest font-light">hansen</div>
             </div>
         </div>
-    </section>
+        -->
 
-    <!-- Venue Section -->
-    <section id="venue" class="bg-gradient-navy py-20 pb-32 relative">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <!-- Section Title -->
-            <div class="flex items-start mb-20">
-                <div class="w-1 md:w-1.5 bg-gradient-ignite h-32 md:h-40 mr-6 md:mr-8"></div>
-                <h2 class="text-5xl md:text-7xl lg:text-8xl font-montserrat font-bold text-white leading-tight">
-                    The<br>Venue
-                </h2>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center mb-8">
+                    <div class="w-1 md:w-1.5 bg-gradient-ignite h-16 md:h-20 mr-6 md:mr-8"></div>
+                    <div>
+                        <p class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-4 uppercase">Partnership Opportunity</p>
+                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white leading-tight">
+                            Partner<br>with Us
+                        </h2>
+                    </div>
+                    <div class="w-1 md:w-1.5 bg-gradient-ignite h-16 md:h-20 ml-6 md:ml-8"></div>
+                </div>
+                <p class="text-lg md:text-xl text-white font-montserrat max-w-3xl mx-auto leading-relaxed">
+                    Join us as a sponsor or exhibitor and align your brand with innovation, entrepreneurship, and the future of African technology. Choose your partnership path below.
+                </p>
             </div>
 
-            <!-- Venue Info -->
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 mb-16">
-                <div>
-                    <h3 class="text-white text-sm md:text-base font-montserrat font-semibold uppercase tracking-wider mb-6">About This Venue:</h3>
-                    <p class="text-white text-base md:text-lg leading-relaxed font-montserrat">
-                        Located in the heart of Ogbomoso, our state-of-the-art conference center provides the perfect environment for innovation and collaboration. Featuring modern amenities, high-speed internet, and spaces designed to inspire creativity and entrepreneurship.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-white text-sm md:text-base font-montserrat font-semibold uppercase tracking-wider mb-6">Full Address:</h3>
-                    <p class="text-white text-base md:text-lg leading-relaxed font-montserrat">
-                        Ogbomoso Innovation Hub<br>
-                        Ilorin-Ogbomoso Road<br>
-                        Ogbomoso, Oyo State, Nigeria
-                    </p>
+            <!-- Partnership Toggle Container -->
+            <!-- Partnership Toggle Buttons -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-white rounded-lg p-1 shadow-lg border border-gray-200">
+                    <button id="sponsorshipTab" class="px-8 py-3 text-sm md:text-base font-montserrat font-semibold rounded-md transition-all duration-300 bg-brand-navy text-white" onclick="showForm('sponsor')">
+                        Sponsorship
+                    </button>
+                    <button id="exhibitionTab" class="px-8 py-3 text-sm md:text-base font-montserrat font-semibold rounded-md transition-all duration-300 text-brand-navy hover:bg-gray-50" onclick="showForm('exhibition')">
+                        Exhibition
+                    </button>
                 </div>
             </div>
 
-            <!-- Venue Buttons -->
-            <div class="flex flex-wrap gap-6">
-                <button class="btn-primary-ignite px-8 py-4 text-sm md:text-base uppercase tracking-wide rounded-md font-montserrat">
-                    Accommodations
-                </button>
-                <button class="btn-secondary-navy px-8 py-4 text-sm md:text-base uppercase tracking-wide rounded-md font-montserrat">
-                    Transportation
-                </button>
-                <button class="btn-secondary-navy px-8 py-4 text-sm md:text-base uppercase tracking-wide rounded-md font-montserrat">
-                    Parking
-                </button>
+            <!-- Partnership Forms - Full Width -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Sponsorship Form -->
+                <div id="sponsorshipForm" class="bg-white p-8 md:p-12 rounded-2xl shadow-brand-lg">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-brand-navy mb-4">Sponsorship Application</h3>
+                        <p class="text-brand-navy font-montserrat">Fill out the form below and our partnerships team will contact you within 48 hours.</p>
+                    </div>
+
+                    <form id="sponsorForm" class="space-y-6">
+                        <!-- Organization Information -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Organization Information</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="orgName" class="block text-brand-navy font-montserrat font-medium mb-2">Organization/Company Name *</label>
+                                    <input
+                                        type="text"
+                                        id="orgName"
+                                        name="orgName"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Enter organization name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="orgType" class="block text-brand-navy font-montserrat font-medium mb-2">Organization Type *</label>
+                                    <select
+                                        id="orgType"
+                                        name="orgType"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    >
+                                        <option value="" class="text-neutral-900">Select organization type</option>
+                                        <option value="corporate" class="text-neutral-900">Corporate</option>
+                                        <option value="financial" class="text-neutral-900">Financial Institution</option>
+                                        <option value="government" class="text-neutral-900">Government Agency</option>
+                                        <option value="ngo" class="text-neutral-900">NGO/Development Partner</option>
+                                        <option value="other" class="text-neutral-900">Other (Please specify)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="website" class="block text-brand-navy font-montserrat font-medium mb-2">Website (Optional)</label>
+                                    <input
+                                        type="url"
+                                        id="website"
+                                        name="website"
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="https://yourwebsite.com"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="officeAddress" class="block text-brand-navy font-montserrat font-medium mb-2">Office Address *</label>
+                                    <input
+                                        type="text"
+                                        id="officeAddress"
+                                        name="officeAddress"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Organization address"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Person Details -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Contact Person Details</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="contactName" class="block text-brand-navy font-montserrat font-medium mb-2">Full Name *</label>
+                                    <input
+                                        type="text"
+                                        id="contactName"
+                                        name="contactName"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Contact person's full name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="jobTitle" class="block text-brand-navy font-montserrat font-medium mb-2">Job Title *</label>
+                                    <input
+                                        type="text"
+                                        id="jobTitle"
+                                        name="jobTitle"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Job title/position"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="contactEmail" class="block text-brand-navy font-montserrat font-medium mb-2">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        name="contactEmail"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="contact@company.com"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="contactPhone" class="block text-brand-navy font-montserrat font-medium mb-2">Phone Number *</label>
+                                    <input
+                                        type="tel"
+                                        id="contactPhone"
+                                        name="contactPhone"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="+234 xxx xxx xxxx"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sponsorship Details -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Sponsorship Details</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="sponsorTier" class="block text-brand-navy font-montserrat font-medium mb-2">Sponsorship Tier *</label>
+                                    <select
+                                        id="sponsorTier"
+                                        name="sponsorTier"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    >
+                                        <option value="" class="text-neutral-900">Select sponsorship tier</option>
+                                        <option value="platinum" class="text-neutral-900">Platinum Sponsor - ₦3,000,000</option>
+                                        <option value="gold" class="text-neutral-900">Gold Sponsor - ₦2,000,000</option>
+                                        <option value="silver" class="text-neutral-900">Silver Sponsor - ₦500,000</option>
+                                        <option value="custom" class="text-neutral-900">Custom Partnership - Estimated</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="sponsorBudget" class="block text-brand-navy font-montserrat font-medium mb-2">Sponsorship Budget (Optional)</label>
+                                    <input
+                                        type="text"
+                                        id="sponsorBudget"
+                                        name="sponsorBudget"
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Your budget range"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-brand-navy font-montserrat font-medium mb-3">Area of Interest (Multiple Choice)</label>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <label class="flex items-center text-brand-navy font-montserrat">
+                                        <input type="checkbox" name="interests[]" value="visibility" class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2">
+                                        <span class="ml-3">Brand Visibility</span>
+                                    </label>
+                                    <label class="flex items-center text-brand-navy font-montserrat">
+                                        <input type="checkbox" name="interests[]" value="speaking" class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2">
+                                        <span class="ml-3">Speaking Opportunity</span>
+                                    </label>
+                                    <label class="flex items-center text-brand-navy font-montserrat">
+                                        <input type="checkbox" name="interests[]" value="booth" class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2">
+                                        <span class="ml-3">Exhibition Booth</span>
+                                    </label>
+                                    <label class="flex items-center text-brand-navy font-montserrat">
+                                        <input type="checkbox" name="interests[]" value="csr" class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2">
+                                        <span class="ml-3">CSR/Community Impact</span>
+                                    </label>
+                                    <label class="flex items-center text-brand-navy font-montserrat">
+                                        <input type="checkbox" name="interests[]" value="tax" class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2">
+                                        <span class="ml-3">Tax & Compliance Education</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Additional Information</h4>
+
+                            <div class="mb-4">
+                                <label for="hearAbout" class="block text-brand-navy font-montserrat font-medium mb-2">How did you hear about this event?</label>
+                                <input
+                                    type="text"
+                                    id="hearAbout"
+                                    name="hearAbout"
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    placeholder="Social media, referral, website, etc."
+                                >
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="outcomes" class="block text-brand-navy font-montserrat font-medium mb-2">What outcomes are you looking to achieve as a Sponsor?</label>
+                                <textarea
+                                    id="outcomes"
+                                    name="outcomes"
+                                    rows="3"
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
+                                    placeholder="Describe your sponsorship goals and expected outcomes..."
+                                ></textarea>
+                            </div>
+
+                            <!-- Confirmation -->
+                            <div>
+                                <label class="flex items-start text-brand-navy font-montserrat text-sm">
+                                    <input type="checkbox" name="confirmation" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2 mt-0.5 flex-shrink-0">
+                                    <span class="ml-3">I confirm that the information provided is accurate. *</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full btn-primary-ignite px-8 py-4 text-lg font-montserrat rounded-lg transition-all duration-300 transform  mt-8"
+                        >
+                            Apply as a Sponsor
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Exhibition Form -->
+                <div id="exhibitionForm" class="bg-white p-8 md:p-12 rounded-2xl shadow-brand-lg" style="display: none;">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-brand-navy mb-4">Exhibition Registration</h3>
+                        <p class="text-brand-navy font-montserrat">Fill out the form below and our events team will contact you within 48 hours.</p>
+                    </div>
+
+                    <form id="exhibitorForm" class="space-y-6">
+                        <!-- Business Information -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Business Information</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="businessName" class="block text-brand-navy font-montserrat font-medium mb-2">Business/Brand Name *</label>
+                                    <input
+                                        type="text"
+                                        id="businessName"
+                                        name="businessName"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Enter business/brand name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="industryCategory" class="block text-brand-navy font-montserrat font-medium mb-2">Industry Category *</label>
+                                    <select
+                                        id="industryCategory"
+                                        name="industryCategory"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    >
+                                        <option value="" class="text-neutral-900">Select industry category</option>
+                                        <option value="tech" class="text-neutral-900">Tech</option>
+                                        <option value="finance" class="text-neutral-900">Finance</option>
+                                        <option value="logistics" class="text-neutral-900">Logistics</option>
+                                        <option value="education" class="text-neutral-900">Education</option>
+                                        <option value="legal" class="text-neutral-900">Legal/Compliance</option>
+                                        <option value="beauty" class="text-neutral-900">Beauty</option>
+                                        <option value="fmcg" class="text-neutral-900">FMCG</option>
+                                        <option value="other" class="text-neutral-900">Other (Please specify)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="businessDescription" class="block text-brand-navy font-montserrat font-medium mb-2">Brief Description of Business *</label>
+                                <textarea
+                                    id="businessDescription"
+                                    name="businessDescription"
+                                    rows="4"
+                                    maxlength="150"
+                                    required
+                                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm resize-none"
+                                    placeholder="Describe your business in max 150 words..."
+                                ></textarea>
+                                <p class="text-brand-navy/70 text-sm font-montserrat mt-1">Maximum 150 words</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Contact Information</h4>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-4">
+                                <div>
+                                    <label for="contactPersonName" class="block text-brand-navy font-montserrat font-medium mb-2">Contact Person Full Name *</label>
+                                    <input
+                                        type="text"
+                                        id="contactPersonName"
+                                        name="contactPersonName"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="Contact person's full name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="contactEmail" class="block text-brand-navy font-montserrat font-medium mb-2">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        name="contactEmail"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="contact@business.com"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="contactPhone" class="block text-brand-navy font-montserrat font-medium mb-2">Phone Number *</label>
+                                    <input
+                                        type="tel"
+                                        id="contactPhone"
+                                        name="contactPhone"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                        placeholder="+234 xxx xxx xxxx"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Exhibition Details -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Exhibition Details</h4>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="exhibitionPackage" class="block text-brand-navy font-montserrat font-medium mb-2">Exhibition Package *</label>
+                                    <select
+                                        id="exhibitionPackage"
+                                        name="exhibitionPackage"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
+                                    >
+                                        <option value="" class="text-neutral-900">Select package</option>
+                                        <option value="standard" class="text-neutral-900">Standard Booth</option>
+                                        <option value="premium" class="text-neutral-900">Premium Booth</option>
+                                        <option value="products" class="text-neutral-900">Products/Services Display</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-brand-navy font-montserrat font-medium mb-3">Power/Internet Requirement *</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="powerInternet" value="yes" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">Yes</span>
+                                        </label>
+                                        <label class="flex items-center text-brand-navy font-montserrat">
+                                            <input type="radio" name="powerInternet" value="no" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 focus:ring-brand-orange focus:ring-2">
+                                            <span class="ml-3">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Compliance & Confirmation -->
+                        <div>
+                            <h4 class="text-brand-navy text-lg font-montserrat font-semibold mb-6">Compliance & Confirmation</h4>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="flex items-start text-brand-navy font-montserrat text-sm">
+                                        <input type="checkbox" name="complianceDeclaration" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2 mt-0.5 flex-shrink-0">
+                                        <span class="ml-3">Our business operates legally and complies with applicable regulations. *</span>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="flex items-start text-brand-navy font-montserrat text-sm">
+                                        <input type="checkbox" name="termsAgreement" required class="w-4 h-4 text-brand-orange bg-white/10 border-brand-navy/30 rounded focus:ring-brand-orange focus:ring-2 mt-0.5 flex-shrink-0">
+                                        <span class="ml-3">I agree to the event exhibition terms. *</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full btn-primary-ignite px-8 py-4 text-lg font-montserrat rounded-lg transition-all duration-300 transform mt-8"
+                        >
+                            Register as an Exhibitor
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16 p-8 bg-white rounded-2xl border-2 border-brand-orange/20">
+                <h3 class="text-2xl md:text-3xl font-montserrat font-bold text-brand-navy mb-4">
+                    Questions About Partnership?
+                </h3>
+                <p class="text-neutral-700 font-montserrat mb-6 max-w-2xl mx-auto">
+                    Contact our partnerships team for more information about sponsorship packages, exhibition opportunities, and custom partnership solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="mailto:partnerships@ogbomosoignite.com" class="btn-secondary-navy px-8 py-3 rounded-lg font-montserrat">
+                        Email Partnerships Team
+                    </a>
+                    <a href="tel:+2348012345678" class="text-brand-orange hover:text-brand-orange-dark font-montserrat font-semibold transition-colors">
+                        +234 801 234 5678
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+
     <!-- Footer Section -->
      <Footer id="footer" class="bg-brand-navy pt-20 pb-5 relative">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <div class="text-center text-white text-sm md:text-base font-montserrat">
-                &copy; 2026 Ogbomoso Ignite. All rights reserved. | Empowering Innovation & Entrepreneurship
+            <!-- Footer Main Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+
+                <!-- Logo & Description -->
+                <div class="lg:col-span-1  text-left">
+                    <div class="flex justify-start mb-4">
+                        <img src="assets/images/navbar-logo-w.png" alt="OTEI Logo" class="h-16 md:h-20">
+                    </div>
+                    <p class="text-white/80 text-sm leading-relaxed font-montserrat">
+                        Empowering the next generation of tech entrepreneurs and innovators in Ogbomoso and beyond.
+                    </p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="text-left">
+                    <h4 class="text-white font-montserrat font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat">About Event</a></li>
+                        <li><a href="#speakers" class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat">Speakers</a></li>
+                        <li><a href="#schedule" class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat">Schedule</a></li>
+                        <li><a href="#partnership" class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat">Partnership</a></li>
+                        <li><a href="#register" class="text-white/80 hover:text-brand-orange transition-colors duration-300 font-montserrat">Register</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Social Media & Contact -->
+                <div class="text-left">
+                    <h4 class="text-white font-montserrat font-bold text-lg mb-4">Connect With Us</h4>
+
+                    <!-- Social Icons -->
+                    <div class="flex justify-start space-x-4 mb-6">
+                        <a href="#" class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-brand-orange p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.755 6.158 6.158 6.158 3.403 0 6.158-2.755 6.158-6.158 0-3.4-2.755-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.788-3.997 3.997-3.997 3.997 1.789 3.997 3.997-1.787 3.997-3.997 3.997z"/>
+                                <path d="M16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941C.583 3.458.16 5.124.066 7.11L.064 7.21c-.098 2.208-.093 7.677 0 9.887.091 1.942.56 3.655 1.941 5.036 1.441 1.441 3.107 1.864 5.092 1.958l.201.002c2.208.098 7.677.093 9.887 0 1.942-.091 3.655-.56 5.036-1.941 1.441-1.441 1.864-3.107 1.958-5.092l.002-.201c.098-2.208.093-7.677 0-9.887-.091-1.942-.56-3.655-1.941-5.036C20.06.615 18.394.192 16.408.098l-.201-.002C14.998.002 13.008.002 12.004.076zm2.274 2.204c.947.041 1.671.171 2.293.36.62.188 1.144.44 1.668.965.524.524.777 1.048.965 1.668.189.622.319 1.346.36 2.293.041.947.049 1.247.049 3.669s-.008 2.722-.049 3.669c-.041.947-.171 1.671-.36 2.293-.188.62-.44 1.144-.965 1.668-.524.524-1.048.777-1.668.965-.622.189-1.346.319-2.293.36-.947.041-1.247.049-3.669.049s-2.722-.008-3.669-.049c-.947-.041-1.671-.171-2.293-.36-.62-.188-1.144-.44-1.668-.965-.524-.524-.777-1.048-.965-1.668-.189-.622-.319-1.346-.36-2.293-.041-.947-.049-1.247-.049-3.669s.008-2.722.049-3.669c.041-.947.171-1.671.36-2.293.188-.62.44-1.144.965-1.668.524-.524 1.048-.777 1.668-.965.622-.189 1.346-.319 2.293-.36.947-.041 1.247-.049 3.669-.049s2.722.008 3.669.049z"/>
+                                <path d="M18.406 5.594c0 .8-.65 1.45-1.45 1.45s-1.45-.65-1.45-1.45.65-1.45 1.45-1.45 1.45.65 1.45 1.45z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-2">
+                        <p class="text-white/80 text-sm font-montserrat">
+                            <span class="text-brand-orange">Email:</span> info@otei.com.ng
+                        </p>
+                        <p class="text-white/80 text-sm font-montserrat">
+                            <span class="text-brand-orange">Phone:</span> +234 801 234 5678
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Event Info & Countdown -->
+                <div class="text-left">
+                    <h4 class="text-white font-montserrat font-bold text-lg mb-4">Event Date</h4>
+                    <div class="mb-4">
+                        <p class="text-white/90 font-montserrat font-semibold text-base">May 3, 2025</p>
+                        <p class="text-white/80 font-montserrat text-sm">9:00 AM - 6:00 PM</p>
+                        <p class="text-white/80 font-montserrat text-sm">Ogbomoso Innovation Hub</p>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                        <p class="text-white font-montserrat text-xs mb-2 uppercase tracking-wide">Countdown</p>
+                        <div id="countdown" class="grid grid-cols-4 gap-1 text-center">
+                            <div>
+                                <div id="days" class="text-brand-orange font-bold text-lg md:text-xl">000</div>
+                                <div class="text-white/80 text-xs font-montserrat">Days</div>
+                            </div>
+                            <div>
+                                <div id="hours" class="text-brand-orange font-bold text-lg md:text-xl">00</div>
+                                <div class="text-white/80 text-xs font-montserrat">Hours</div>
+                            </div>
+                            <div>
+                                <div id="minutes" class="text-brand-orange font-bold text-lg md:text-xl">00</div>
+                                <div class="text-white/80 text-xs font-montserrat">Mins</div>
+                            </div>
+                            <div>
+                                <div id="seconds" class="text-brand-orange font-bold text-lg md:text-xl">00</div>
+                                <div class="text-white/80 text-xs font-montserrat">Secs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-white/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-white/80 text-sm font-montserrat text-center md:text-left">
+                        &copy; 2026 Ogbomoso Tech & Entrepreneurship Ignite. All rights reserved.
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -803,6 +1292,102 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Ultra Simple Toggle Script -->
+    <script>
+        function showForm(formType) {
+            // Get elements
+            const sponsorBtn = document.getElementById('sponsorshipTab');
+            const exhibitionBtn = document.getElementById('exhibitionTab');
+            const sponsorForm = document.getElementById('sponsorshipForm');
+            const exhibitionForm = document.getElementById('exhibitionForm');
+
+            // Reset all buttons - direct style manipulation
+            sponsorBtn.style.backgroundColor = 'transparent';
+            sponsorBtn.style.color = '#0b1426';
+            exhibitionBtn.style.backgroundColor = 'transparent';
+            exhibitionBtn.style.color = '#0b1426';
+
+            // Hide all forms
+            sponsorForm.style.display = 'none';
+            exhibitionForm.style.display = 'none';
+
+            // Show selected form and activate button
+            if (formType === 'sponsor') {
+                sponsorBtn.style.backgroundColor = '#0b1426';
+                sponsorBtn.style.color = 'white';
+                sponsorForm.style.display = 'block';
+            } else if (formType === 'exhibition') {
+                exhibitionBtn.style.backgroundColor = '#0b1426';
+                exhibitionBtn.style.color = 'white';
+                exhibitionForm.style.display = 'block';
+            }
+        }
+
+        // Initialize when page loads
+        window.onload = function() {
+            showForm('sponsor');
+        };
+    </script>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        // Set the date we're counting down to (May 3, 2025)
+        const countDownDate = new Date("May 3, 2025 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        const countdownFunction = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements with respective ids
+            document.getElementById("days").innerHTML = String(days).padStart(3, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<div class='text-brand-orange font-bold text-lg'>EVENT STARTED!</div>";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Navigation Dot Tooltips Enhancement Script -->
+    <script>
+        // Add click functionality to navigation dots
+        document.addEventListener('DOMContentLoaded', function() {
+            const navDots = document.querySelectorAll('[data-nav]');
+
+            navDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-nav');
+                    const targetElement = document.getElementById(targetSection);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+
+                // Add cursor pointer style
+                dot.style.cursor = 'pointer';
+            });
+        });
+    </script>
+
 
 </body>
 </html>

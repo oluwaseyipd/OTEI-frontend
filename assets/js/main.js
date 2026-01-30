@@ -1,3 +1,5 @@
+// JavaScript for OTEI Frontend
+
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -40,8 +42,7 @@ const sections = [
   "speakers",
   "schedule",
   "volunteer",
-  "sponsors",
-  "venue",
+  "partnership",
 ];
 
 navDots.forEach((dot, index) => {
@@ -189,13 +190,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Validate required fields
       const requiredFields = [
-        "firstName",
-        "lastName",
+        "fullName",
+        "ageRange",
         "email",
         "phone",
         "location",
         "volunteerArea",
         "motivation",
+        "available",
+        "briefing",
         "terms",
       ];
       let isValid = true;
@@ -212,14 +215,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Check availability checkboxes
-      if (!data.availability || data.availability.length === 0) {
+      // Check radio buttons for availability
+      if (!data.available) {
         isValid = false;
-        const availabilitySection = volunteerForm
-          .querySelector('input[name="availability[]"]')
+        const availableSection = volunteerForm
+          .querySelector('input[name="available"]')
           .closest("div")
           .closest("div");
-        availabilitySection.style.borderColor = "#ff6b35";
+        availableSection.style.borderColor = "#ff6b35";
+      }
+
+      if (!data.briefing) {
+        isValid = false;
+        const briefingSection = volunteerForm
+          .querySelector('input[name="briefing"]')
+          .closest("div")
+          .closest("div");
+        briefingSection.style.borderColor = "#ff6b35";
       }
 
       if (!isValid) {
@@ -282,5 +294,202 @@ function smoothScrollToVolunteer() {
       block: "start",
       inline: "nearest",
     });
+  }
+}
+
+// Sponsor Form Handling
+document.addEventListener("DOMContentLoaded", function () {
+  const sponsorForm = document.getElementById("sponsorForm");
+
+  if (sponsorForm) {
+    sponsorForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(sponsorForm);
+      const data = {};
+
+      // Process regular fields and checkboxes
+      for (let [key, value] of formData.entries()) {
+        if (key === "interests[]") {
+          if (!data.interests) data.interests = [];
+          data.interests.push(value);
+        } else {
+          data[key] = value;
+        }
+      }
+
+      // Validate required fields
+      const requiredFields = [
+        "orgName",
+        "orgType",
+        "officeAddress",
+        "contactName",
+        "jobTitle",
+        "contactEmail",
+        "contactPhone",
+        "sponsorTier",
+        "confirmation",
+      ];
+      let isValid = true;
+
+      requiredFields.forEach((field) => {
+        const input = sponsorForm.querySelector(`[name="${field}"]`);
+        if (!data[field] || data[field].trim() === "") {
+          isValid = false;
+          input.style.borderColor = "#ff6b35";
+          input.style.boxShadow = "0 0 0 2px rgba(255, 107, 53, 0.2)";
+        } else {
+          input.style.borderColor = "";
+          input.style.boxShadow = "";
+        }
+      });
+
+      if (!isValid) {
+        // Show error message
+        showSponsorFormMessage("Please fill in all required fields.", "error");
+        return;
+      }
+
+      // Simulate form submission
+      showSponsorFormMessage(
+        "Thank you! Your sponsorship application has been submitted. Our partnerships team will contact you within 48 hours.",
+        "success",
+      );
+
+      // Reset form
+      sponsorForm.reset();
+
+      // In a real application, you would send the data to your server:
+      // fetch('/api/sponsor', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+    });
+  }
+});
+
+// Sponsor form message display function
+function showSponsorFormMessage(message, type) {
+  const existingMessage = document.querySelector(".sponsor-form-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `sponsor-form-message p-4 rounded-lg font-montserrat text-center mb-4 ${
+    type === "success"
+      ? "bg-green-100 text-green-800 border border-green-200"
+      : "bg-red-100 text-red-800 border border-red-200"
+  }`;
+  messageDiv.textContent = message;
+
+  const form = document.getElementById("sponsorForm");
+  if (form) {
+    form.parentNode.insertBefore(messageDiv, form);
+
+    // Remove message after 5 seconds
+    setTimeout(() => {
+      messageDiv.remove();
+    }, 5000);
+  }
+}
+
+// Exhibitor Form Handling
+document.addEventListener("DOMContentLoaded", function () {
+  const exhibitorForm = document.getElementById("exhibitorForm");
+
+  if (exhibitorForm) {
+    exhibitorForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(exhibitorForm);
+      const data = {};
+
+      // Process form fields
+      for (let [key, value] of formData.entries()) {
+        data[key] = value;
+      }
+
+      // Validate required fields
+      const requiredFields = [
+        "businessName",
+        "industryCategory",
+        "businessDescription",
+        "contactPersonName",
+        "contactEmail",
+        "contactPhone",
+        "exhibitionPackage",
+        "powerInternet",
+        "complianceDeclaration",
+        "termsAgreement",
+      ];
+      let isValid = true;
+
+      requiredFields.forEach((field) => {
+        const input = exhibitorForm.querySelector(`[name="${field}"]`);
+        if (!data[field] || data[field].trim() === "") {
+          isValid = false;
+          input.style.borderColor = "#ff6b35";
+          input.style.boxShadow = "0 0 0 2px rgba(255, 107, 53, 0.2)";
+        } else {
+          input.style.borderColor = "";
+          input.style.boxShadow = "";
+        }
+      });
+
+      if (!isValid) {
+        // Show error message
+        showExhibitorFormMessage(
+          "Please fill in all required fields.",
+          "error",
+        );
+        return;
+      }
+
+      // Simulate form submission
+      showExhibitorFormMessage(
+        "Thank you! Your exhibition registration has been submitted. Our events team will contact you within 48 hours.",
+        "success",
+      );
+
+      // Reset form
+      exhibitorForm.reset();
+
+      // In a real application, you would send the data to your server:
+      // fetch('/api/exhibitor', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+    });
+  }
+});
+
+// Exhibitor form message display function
+function showExhibitorFormMessage(message, type) {
+  const existingMessage = document.querySelector(".exhibitor-form-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `exhibitor-form-message p-4 rounded-lg font-montserrat text-center mb-4 ${
+    type === "success"
+      ? "bg-green-100 text-green-800 border border-green-200"
+      : "bg-red-100 text-red-800 border border-red-200"
+  }`;
+  messageDiv.textContent = message;
+
+  const form = document.getElementById("exhibitorForm");
+  if (form) {
+    form.parentNode.insertBefore(messageDiv, form);
+
+    // Remove message after 5 seconds
+    setTimeout(() => {
+      messageDiv.remove();
+    }, 5000);
   }
 }
