@@ -44,3 +44,57 @@ The Ogbomoso Ignite visual identity is built on a high-energy contrast between p
 ## 4. Accessibility & Legibility
 * **Contrast Check:** When using the Ignite Orange gradient for buttons, ensure the text inside is either **Pure White** or **Deep Navy** depending on which offers better contrast (WCAG standards).
 * **Hover States:** Interactive elements should shift in brightness or depth on hover to provide clear tactile feedback to the user.
+
+
+
+
+Event REgistration
+
+Personal Information
+- first name
+- last name
+- email
+- phone number
+- gender
+- city/state
+
+Participant Category
+- You are registering as [max 3](Student, Aspiring Entrepreneur, Startup Founder, Business Owner/ SME, Tech Professional, Corporate Professional, Government/ NGO Representative)
+
+Organization/ School Details
+- Organization/ School Name
+- Role/ Course of Study
+- Years of Experience (Optional)
+
+Intrest Area [multiple select]
+Which sessions are you most interested in?
+- Technology & Digital Skills
+- Entrepreneurship & Business Growth
+- Startup Funding & Pitching
+- Tax Education
+- Business Compliance & Regulation
+- Marketing & Sales
+- Career Development
+
+Event Participation
+- Will you attend the full event on May 2, 2026? (Yes, No)
+- How did you hear about this event? (Social Media, Friend/ Referral, School/ Organization, Sponsor/ Partner, Other)
+
+Special Requests
+- Do you have any accessibility or special needs? (Yes (Please specify), No)
+- Would you like to pitch a startup idea? (Yes, No)
+- Would you like to receive post-event mentorship? (Yes, No)
+- Would you like to join our community after the event? (Yes, No)
+
+
+Confirmation
+- I agree to recieve event updates and communications [checkbox]
+- I understand this is a physical event and i will attend responsibly [checkbox]
+
+Register for the event [button]
+
+Additional info
+
+Join our WhatsApp group [url: https://chat.whatsapp.com/IV3NhSWZIzTA3kXw5Q5JEy?mode=gi_c]
+
+Your information will be kept confidential and used only for event communication and planning.

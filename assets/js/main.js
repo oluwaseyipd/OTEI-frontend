@@ -746,3 +746,73 @@ function showRegistrationMessage(message, type) {
     }, 7000);
   }
 }
+
+// Timeline Animation for Schedule Section
+document.addEventListener("DOMContentLoaded", function () {
+  // Timeline intersection observer for animation
+  const timelineItems = document.querySelectorAll(
+    "#schedule .relative.flex.items-center",
+  );
+
+  const timelineObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }, index * 200);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
+
+  // Apply initial styles and observe timeline items
+  timelineItems.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateY(30px)";
+    item.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+    timelineObserver.observe(item);
+  });
+
+  // Enhanced hover effects for timeline cards
+  const timelineCards = document.querySelectorAll(
+    "#schedule .bg-white\\/95, #schedule .bg-gradient-to-r",
+  );
+
+  timelineCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-8px) scale(1.02)";
+      card.style.boxShadow = "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0) scale(1)";
+      card.style.boxShadow = "";
+    });
+  });
+
+  // Timeline dots pulse effect on scroll
+  const timelineDots = document.querySelectorAll(
+    "#schedule .absolute.left-1\\/2.transform.-translate-x-1\\/2",
+  );
+
+  timelineDots.forEach((dot) => {
+    const dotObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "pulse 2s infinite";
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    dotObserver.observe(dot);
+  });
+});
