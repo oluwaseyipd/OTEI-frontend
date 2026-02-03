@@ -868,6 +868,7 @@ body.navbar-fixed-active {
     border: 2px solid rgba(11, 20, 38, 0.3) !important;
     color: var(--brand-navy) !important;
     font-weight: 500 !important;
+    padding-right: 2.5rem !important;
 }
 
 #volunteerForm input[type="text"]::placeholder,
@@ -926,6 +927,7 @@ body.navbar-fixed-active {
     border: 2px solid rgba(11, 20, 38, 0.3) !important;
     color: var(--brand-navy) !important;
     font-weight: 500 !important;
+    padding-right: 2.5rem !important;
 }
 
 #sponsorForm input[type="text"]::placeholder,
@@ -1116,6 +1118,7 @@ body.navbar-fixed-active {
     border: 2px solid rgba(11, 20, 38, 0.3) !important;
     color: var(--brand-navy) !important;
     font-weight: 500 !important;
+    padding-right: 2.5rem !important;
 }
 
 #exhibitorForm input[type="text"]::placeholder,

@@ -341,18 +341,20 @@
 
             <!-- Hero Content -->
             <div
-                class="hero-content relative z-10 flex items-center justify-center min-h-[calc(100vh-120px)] px-6 md:px-12 lg:px-20"
+                class="hero-content relative z-10 flex items-center justify-center min-h-[calc(100vh-120px)] px-0 md:px-12 lg:px-20"
             >
                 <div
-                    class="flex flex-col md:flex-row items-center md:items-end text-center space-y-24 md:space-y-0 space-x-12 md:space-x-20"
+                    class="flex flex-col md:flex-row items-center md:items-end text-center space-y-24 md:space-y-0 space-x-0 md:space-x-20"
                 >
-                    <div class="flex flex-col items-start mb-10 md:mb-0">
+                    <div
+                        class="flex flex-col items-center md:items-start my-10 md:mb-0"
+                    >
                         <p
-                            class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-6 uppercase"
+                            class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-2 md:mb-6 uppercase"
                         >
                             Technology & Entrepreneurship Conference
                         </p>
-                        <div class="flex items-start">
+                        <div class="flex items-start mt-16 md:mt-0">
                             <div
                                 class="w-1 md:w-3 bg-white h-20 md:h-80 mr-6 md:mr-8"
                             ></div>
@@ -364,7 +366,9 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-end items-center">
+                    <div
+                        class="flex flex-col items-center justify-center md:justify-end w-full"
+                    >
                         <div class="text-white space-y-2 mb-10 font-montserrat">
                             <p class="text-sm md:text-base">
                                 15 March 2026, 09:00 — 18:00
@@ -1278,7 +1282,7 @@
                                     <div>
                                         <label
                                             for="fullName"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Full Name *</label
                                         >
                                         <input
@@ -1294,7 +1298,7 @@
                                     <div>
                                         <label
                                             for="ageRange"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Age Range *</label
                                         >
                                         <select
@@ -1341,7 +1345,7 @@
                                     <div>
                                         <label
                                             for="email"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Email Address *</label
                                         >
                                         <input
@@ -1357,7 +1361,7 @@
                                     <div>
                                         <label
                                             for="phone"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Phone Number (WhatsApp Preferably)
                                             *</label
                                         >
@@ -1375,7 +1379,7 @@
                                 <div>
                                     <label
                                         for="location"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >Location (School/Organization/City)
                                         *</label
                                     >
@@ -1401,7 +1405,7 @@
                                 <div class="mb-4">
                                     <label
                                         for="volunteerArea"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >Area you'd like to volunteer *</label
                                     >
                                     <select
@@ -1452,7 +1456,7 @@
                                 <div>
                                     <label
                                         for="skills"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >Relevant Skills or Experience</label
                                     >
                                     <textarea
@@ -1476,7 +1480,7 @@
                                 <div class="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label
-                                            class="block text-brand-navy font-montserrat font-medium mb-3"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-3"
                                             >Are you available on May 2, 2026?
                                             *</label
                                         >
@@ -1510,7 +1514,7 @@
 
                                     <div>
                                         <label
-                                            class="block text-brand-navy font-montserrat font-medium mb-3"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-3"
                                             >Can you attend pre-event briefing?
                                             *</label
                                         >
@@ -1549,13 +1553,13 @@
                                 <h4
                                     class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
                                 >
-                                    Motivation & Confirmation
+                                    Motivation
                                 </h4>
 
                                 <div class="mb-6">
                                     <label
                                         for="motivation"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >Why do you want to volunteer for this
                                         event? *</label
                                     >
@@ -1760,7 +1764,7 @@
                                     <div>
                                         <label
                                             for="orgName"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Organization/Company Name *</label
                                         >
                                         <input
@@ -1776,7 +1780,7 @@
                                     <div>
                                         <label
                                             for="orgType"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Organization Type *</label
                                         >
                                         <select
@@ -1829,7 +1833,7 @@
                                     <div>
                                         <label
                                             for="website"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Website (Optional)</label
                                         >
                                         <input
@@ -1844,7 +1848,7 @@
                                     <div>
                                         <label
                                             for="officeAddress"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Office Address *</label
                                         >
                                         <input
@@ -1871,7 +1875,7 @@
                                     <div>
                                         <label
                                             for="contactName"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Full Name *</label
                                         >
                                         <input
@@ -1887,7 +1891,7 @@
                                     <div>
                                         <label
                                             for="jobTitle"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Job Title *</label
                                         >
                                         <input
@@ -1905,7 +1909,7 @@
                                     <div>
                                         <label
                                             for="contactEmail"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Email Address *</label
                                         >
                                         <input
@@ -1921,7 +1925,7 @@
                                     <div>
                                         <label
                                             for="contactPhone"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Phone Number *</label
                                         >
                                         <input
@@ -1948,7 +1952,7 @@
                                     <div>
                                         <label
                                             for="sponsorTier"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Sponsorship Tier *</label
                                         >
                                         <select
@@ -1993,7 +1997,7 @@
                                     <div>
                                         <label
                                             for="sponsorBudget"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Sponsorship Budget
                                             (Optional)</label
                                         >
@@ -2009,7 +2013,7 @@
 
                                 <div class="mb-4">
                                     <label
-                                        class="block text-brand-navy font-montserrat font-medium mb-3"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-3"
                                         >Area of Interest (Multiple
                                         Choice)</label
                                     >
@@ -2095,7 +2099,7 @@
                                 <div class="mb-4">
                                     <label
                                         for="hearAbout"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >How did you hear about this
                                         event?</label
                                     >
@@ -2111,7 +2115,7 @@
                                 <div class="mb-6">
                                     <label
                                         for="outcomes"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >What outcomes are you looking to
                                         achieve as a Sponsor?</label
                                     >
@@ -2183,7 +2187,7 @@
                                     <div>
                                         <label
                                             for="businessName"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Business/Brand Name *</label
                                         >
                                         <input
@@ -2199,7 +2203,7 @@
                                     <div>
                                         <label
                                             for="industryCategory"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Industry Category *</label
                                         >
                                         <select
@@ -2269,7 +2273,7 @@
                                 <div>
                                     <label
                                         for="businessDescription"
-                                        class="block text-brand-navy font-montserrat font-medium mb-2"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                         >Brief Description of Business *</label
                                     >
                                     <textarea
@@ -2301,7 +2305,7 @@
                                     <div>
                                         <label
                                             for="contactPersonName"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Contact Person Full Name *</label
                                         >
                                         <input
@@ -2317,7 +2321,7 @@
                                     <div>
                                         <label
                                             for="contactEmail"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Email Address *</label
                                         >
                                         <input
@@ -2333,7 +2337,7 @@
                                     <div>
                                         <label
                                             for="contactPhone"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Phone Number *</label
                                         >
                                         <input
@@ -2360,7 +2364,7 @@
                                     <div>
                                         <label
                                             for="exhibitionPackage"
-                                            class="block text-brand-navy font-montserrat font-medium mb-2"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
                                             >Exhibition Package *</label
                                         >
                                         <select
@@ -2398,7 +2402,7 @@
 
                                     <div>
                                         <label
-                                            class="block text-brand-navy font-montserrat font-medium mb-3"
+                                            class="block text-sm text-brand-navy font-montserrat font-medium mb-3"
                                             >Power/Internet Requirement *</label
                                         >
                                         <div class="space-y-2">
@@ -2433,12 +2437,6 @@
 
                             <!-- Compliance & Confirmation -->
                             <div>
-                                <h4
-                                    class="text-brand-navy text-lg font-montserrat font-semibold mb-6"
-                                >
-                                    Compliance & Confirmation
-                                </h4>
-
                                 <div class="space-y-4">
                                     <div>
                                         <label
@@ -2779,13 +2777,7 @@
                                     viewBox="0 0 24 24"
                                 >
                                     <path
-                                        d="M12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.755 6.158 6.158 6.158 3.403 0 6.158-2.755 6.158-6.158 0-3.4-2.755-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.788-3.997 3.997-3.997 3.997 1.789 3.997 3.997-1.787 3.997-3.997 3.997z"
-                                    />
-                                    <path
-                                        d="M16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941C.583 3.458.16 5.124.066 7.11L.064 7.21c-.098 2.208-.093 7.677 0 9.887.091 1.942.56 3.655 1.941 5.036 1.441 1.441 3.107 1.864 5.092 1.958l.201.002c2.208.098 7.677.093 9.887 0 1.942-.091 3.655-.56 5.036-1.941 1.441-1.441 1.864-3.107 1.958-5.092l.002-.201c.098-2.208.093-7.677 0-9.887-.091-1.942-.56-3.655-1.941-5.036C20.06.615 18.394.192 16.408.098l-.201-.002C14.998.002 13.008.002 12.004.076zm2.274 2.204c.947.041 1.671.171 2.293.36.62.188 1.144.44 1.668.965.524.524.777 1.048.965 1.668.189.622.319 1.346.36 2.293.041.947.049 1.247.049 3.669s-.008 2.722-.049 3.669c-.041.947-.171 1.671-.36 2.293-.188.62-.44 1.144-.965 1.668-.524.524-1.048.777-1.668.965-.622.189-1.346.319-2.293.36-.947.041-1.247.049-3.669.049s-2.722-.008-3.669-.049c-.947-.041-1.671-.171-2.293-.36-.62-.188-1.144-.44-1.668-.965-.524-.524-.777-1.048-.965-1.668-.189-.622-.319-1.346-.36-2.293-.041-.947-.049-1.247-.049-3.669s.008-2.722.049-3.669c.041-.947.171-1.671.36-2.293.188-.62.44-1.144.965-1.668.524-.524 1.048-.777 1.668-.965.622-.189 1.346-.319 2.293-.36.947-.041 1.247-.049 3.669-.049s2.722.008 3.669.049z"
-                                    />
-                                    <path
-                                        d="M18.406 5.594c0 .8-.65 1.45-1.45 1.45s-1.45-.65-1.45-1.45.65-1.45 1.45-1.45 1.45.65 1.45 1.45z"
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                                     />
                                 </svg>
                             </a>
