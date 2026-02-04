@@ -1195,6 +1195,7 @@ body.navbar-fixed-active {
     opacity: 1;
     visibility: visible;
     padding-top: 100px;
+    background: rgba(11, 20, 38, 0.95) !important;
 }
 
 #mobileMenu.hidden {
@@ -1216,7 +1217,7 @@ body.mobile-menu-open #navbar {
     right: 0;
     width: 100%;
     z-index: 1002 !important;
-    background: rgba(11, 20, 38, 0.95) !important;
+    /*background: rgba(11, 20, 38, 0.95) !important;*/
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-brand);
     transition: all 0.3s ease;
@@ -1224,7 +1225,7 @@ body.mobile-menu-open #navbar {
 
 /* Override regular scroll behavior when mobile menu is open */
 body.mobile-menu-open #navbar.navbar-fixed {
-    background: rgba(11, 20, 38, 0.95) !important;
+    /*background: rgba(11, 20, 38, 0.95) !important;*/
 }
 
 /* Navbar logo colors when mobile menu is open */

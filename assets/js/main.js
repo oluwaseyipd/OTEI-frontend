@@ -120,6 +120,7 @@ window.addEventListener("scroll", () => {
   }
 
   // Fixed navbar logic
+  const navbar = document.getElementById("navbar");
   if (navbar) {
     if (scrollY > 50) {
       navbar.classList.add("navbar-fixed");
@@ -127,6 +128,44 @@ window.addEventListener("scroll", () => {
     } else {
       navbar.classList.remove("navbar-fixed");
       document.body.classList.remove("navbar-fixed-active");
+    }
+  }
+});
+
+// Logo/background swap logic for navbar after hero section
+const aboutSection = document.getElementById("about");
+const heroBackground = document.getElementById("heroBackground");
+const navbarLogoWhite = document.getElementById("navbarLogoWhite");
+const navbarLogoColored = document.getElementById("navbarLogoColored");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Fixed navbar logic
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
+    if (scrollY > 50) {
+      navbar.classList.add("navbar-fixed");
+      document.body.classList.add("navbar-fixed-active");
+    } else {
+      navbar.classList.remove("navbar-fixed");
+      document.body.classList.remove("navbar-fixed-active");
+    }
+  }
+
+  // Logo/background swap logic
+  if (aboutSection && navbar) {
+    const aboutTop = aboutSection.offsetTop;
+    if (scrollY >= aboutTop - navbar.offsetHeight) {
+      navbar.classList.add("navbar-colored");
+      if (heroBackground) heroBackground.style.opacity = "0";
+      if (navbarLogoWhite) navbarLogoWhite.style.opacity = "0";
+      if (navbarLogoColored) navbarLogoColored.style.opacity = "1";
+    } else {
+      navbar.classList.remove("navbar-colored");
+      if (heroBackground) heroBackground.style.opacity = "1";
+      if (navbarLogoWhite) navbarLogoWhite.style.opacity = "1";
+      if (navbarLogoColored) navbarLogoColored.style.opacity = "0";
     }
   }
 });
