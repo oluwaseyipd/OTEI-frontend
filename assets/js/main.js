@@ -1,5 +1,3 @@
-// JavaScript for OTEI Frontend
-
 // Mobile Menu Toggle with Hamburger to X Animation
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -108,32 +106,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Hero background, schedule, and navbar logic
-  const heroBackground = document.getElementById("heroBackground");
-  const aboutSection = document.getElementById("about");
-  const scheduleSection = document.getElementById("schedule");
-  const scheduleOverlay = document.querySelector(".schedule-gradient-overlay");
-  const navbar = document.getElementById("navbar");
-
-  if (heroBackground && aboutSection) {
-    const aboutTop = aboutSection.offsetTop;
-
-    // Hero background logic
-    if (scrollY > 50) {
-      heroBackground.classList.add("hero-fixed-bg");
-    } else {
-      heroBackground.classList.remove("hero-fixed-bg");
-    }
-
-    if (scrollY >= aboutTop - window.innerHeight * 0.3) {
-      heroBackground.style.opacity = "0";
-      heroBackground.style.transition = "opacity 0.5s ease-out";
-    } else {
-      heroBackground.style.opacity = "1";
-      heroBackground.style.transition = "opacity 0.5s ease-in";
-    }
-  }
-
   // Schedule gradient logic
   if (scheduleSection && scheduleOverlay) {
     const scheduleTop = scheduleSection.offsetTop;
@@ -157,20 +129,6 @@ window.addEventListener("scroll", () => {
       document.body.classList.remove("navbar-fixed-active");
     }
   }
-});
-
-// Floating Shapes Navigation
-document.querySelectorAll(".floating-shape[data-nav]").forEach((shape) => {
-  shape.addEventListener("click", function () {
-    const targetSection = this.dataset.nav;
-    const section = document.getElementById(targetSection);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  });
 });
 
 // Speaker Progress Bar Animation on Scroll
