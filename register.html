@@ -857,15 +857,60 @@
                                         >
                                     </label>
                                 </div>
-                                <div class="accessibility-details-wrapper">
+                                <div
+                                    id="accessibilityDetailsWrapper"
+                                    style="
+                                        max-height: 0;
+                                        overflow: hidden;
+                                        transition: max-height 0.3s ease;
+                                    "
+                                >
+                                    <label
+                                        for="accessibilityDetailsInput"
+                                        class="block text-sm text-brand-navy font-montserrat font-medium mb-2"
+                                    >
+                                        Please specify
+                                    </label>
                                     <textarea
-                                        id="accessibilityDetails"
+                                        id="accessibilityDetailsInput"
                                         name="accessibilityDetails"
                                         rows="3"
                                         class="w-full px-4 py-3 rounded-lg bg-white/10 border border-brand-navy/30 text-brand-navy placeholder-brand-navy/60 font-montserrat focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent backdrop-blur-sm"
                                         placeholder="Please specify your accessibility needs..."
                                     ></textarea>
                                 </div>
+                                <script>
+                                    const yesRadio =
+                                        document.getElementById(
+                                            "accessibilityYes",
+                                        );
+                                    const noRadio =
+                                        document.getElementById(
+                                            "accessibilityNo",
+                                        );
+                                    const detailsDiv = document.getElementById(
+                                        "accessibilityDetailsWrapper",
+                                    );
+
+                                    function toggleDetails() {
+                                        if (yesRadio.checked) {
+                                            detailsDiv.style.maxHeight =
+                                                "200px";
+                                        } else {
+                                            detailsDiv.style.maxHeight = "0";
+                                        }
+                                    }
+                                    yesRadio.addEventListener(
+                                        "change",
+                                        toggleDetails,
+                                    );
+                                    noRadio.addEventListener(
+                                        "change",
+                                        toggleDetails,
+                                    );
+                                    // Set initial state on page load
+                                    toggleDetails();
+                                </script>
                             </div>
 
                             <div>
