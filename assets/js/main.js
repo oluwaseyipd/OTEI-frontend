@@ -56,14 +56,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Navigation Dots Functionality
 const navDots = document.querySelectorAll(".nav-dot");
-const sections = [
-  "home",
-  "about",
-  "speakers",
-  "schedule",
-  "volunteer",
-  "partnership",
-];
+const sections = ["home", "about", "schedule", "speakers"];
 
 navDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
@@ -812,4 +805,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dotObserver.observe(dot);
   });
+});
+
+// Speakers Carousel
+//
+//   // Initialize carousel
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".speakers-carousel-track");
+  const dots = document.querySelectorAll(".speaker-nav-dot");
+
+  // Get card width based on screen size
+  const getCardWidth = () => {
+    return window.innerWidth >= 768 ? 380 + 48 : 320 + 32; // card width + gap
+  };
+
+  // Click navigation for dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      const cardWidth = getCardWidth();
+      track.style.animation = "none";
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+      // Update active dot
+      dots.forEach((d) => d.classList.remove("active"));
+      dot.classList.add("active");
+
+      // Resume animation after a delay
+      setTimeout(() => {
+        track.style.animation = "";
+      }, 3000);
+    });
+  });
+
+  // Auto-update active dot based on scroll position
+  let lastScrollTime = Date.now();
+  const updateActiveDot = () => {
+    const now = Date.now();
+    const elapsed = (now - lastScrollTime) / 1000; // seconds
+    const cardWidth = getCardWidth();
+    const totalWidth = cardWidth * 3; // 3 original cards
+    const progress = (elapsed % 80) / 100; // 40s animation duration
+    const scrollPosition = progress * totalWidth;
+    const activeIndex = Math.floor(scrollPosition / cardWidth) % 3;
+
+    dots.forEach((d, i) => {
+      d.classList.toggle("active", i === activeIndex);
+    });
+
+    requestAnimationFrame(updateActiveDot);
+  };
+
+  // Start the active dot updater
+  requestAnimationFrame(updateActiveDot);
 });

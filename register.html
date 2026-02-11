@@ -99,71 +99,79 @@
     </head>
 
     <body>
-        <section>
+        <!-- Hero Section -->
+        <section id="home" class="hero relative">
+            <div class="grid-bg"></div>
+
+            <!-- Fixed Background - same as homepage -->
+            <div id="heroBackground" class="hero-bg fixed inset-0 z-0"></div>
+
             <!-- Navigation -->
             <nav
                 id="navbar"
                 class="hero-content relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-4"
             >
-                <!--<div class="text-white text-2xl md:text-3xl font-bold">The Grid.</div>-->
-                <!-- Dynamic Logo - White for hero, Colored for scrolled -->
                 <a
                     href="index.html"
                     class="relative w-24 md:w-32 transition-opacity duration-300"
                 >
                     <img
                         id="navbarLogoWhite"
-                        src="assets/images/navbar-logo.png"
+                        src="assets/images/navbar-logo-w.png"
                         alt="The Grid Logo"
-                        class="w-24 md:w-32 transition-opacity duration-300" />
+                        class="w-24 md:w-32 transition-opacity duration-300"
+                    />
                     <img
                         id="navbarLogoColored"
                         src="assets/images/navbar-logo.png"
                         alt="The Grid Logo"
                         class="w-24 md:w-32 absolute top-0 left-0 opacity-0 transition-opacity duration-300"
-                /></a>
+                    />
+                </a>
                 <ul
                     id="navbarMenu"
-                    class="hidden md:flex space-x-8 lg:space-x-12 text-brand-navy font-montserrat transition-colors duration-300"
+                    class="hidden md:flex space-x-8 lg:space-x-12 text-white font-montserrat transition-colors duration-300"
                 >
                     <li>
                         <a
-                            href="index.html"
+                            href="index.html#about"
                             class="nav-link hover:text-brand-orange transition-colors"
-                            data-section="about"
                             >About</a
                         >
                     </li>
                     <li>
                         <a
-                            href="index.html"
+                            href="index.html#speakers"
                             class="nav-link hover:text-brand-orange transition-colors"
-                            data-section="speakers"
                             >Speakers</a
                         >
                     </li>
                     <li>
                         <a
-                            href="index.html"
+                            href="index.html#schedule"
                             class="nav-link hover:text-brand-orange transition-colors"
-                            data-section="schedule"
                             >Schedule</a
                         >
                     </li>
                     <li>
                         <a
-                            href="index.html"
+                            href="volunteer.html"
                             class="nav-link hover:text-brand-orange transition-colors"
-                            data-section="volunteer"
                             >Volunteer</a
                         >
                     </li>
                     <li>
                         <a
-                            href="index.html"
+                            href="sponsor.html"
                             class="nav-link hover:text-brand-orange transition-colors"
-                            data-section="partnership"
-                            >Partnership</a
+                            >Sponsor</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="exhibition.html"
+                            class="nav-link hover:text-brand-orange transition-colors"
+                            >Exhibition</a
                         >
                     </li>
                 </ul>
@@ -175,9 +183,9 @@
                     >Register Now</a
                 >
 
-                <!-- Mobile Menu Button with Hamburger to X Animation -->
+                <!-- Mobile Menu Button -->
                 <button
-                    class="md:hidden text-white transition-colors duration-300 relative w-8 h-8 flex items-center justify-center"
+                    class="lg:hidden text-white transition-colors duration-300 relative w-8 h-8 flex items-center justify-center"
                     id="mobileMenuBtn"
                 >
                     <div class="hamburger-lines">
@@ -191,75 +199,69 @@
             <!-- Mobile Menu -->
             <div
                 id="mobileMenu"
-                class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center"
+                class="hidden lg:hidden fixed top-0 left-0 w-full h-full bg-brand-navy z-50 flex flex-col items-center justify-center"
             >
                 <ul
                     class="flex flex-col space-y-8 text-white text-xl text-center font-montserrat"
                 >
                     <li>
-                        <a
-                            href="index.html"
-                            class="mobile-nav-link"
-                            data-section="about"
+                        <a href="index.html#about" class="mobile-nav-link"
                             >About</a
                         >
                     </li>
                     <li>
-                        <a
-                            href="index.html"
-                            class="mobile-nav-link"
-                            data-section="speakers"
+                        <a href="index.html#speakers" class="mobile-nav-link"
                             >Speakers</a
                         >
                     </li>
                     <li>
-                        <a
-                            href="index.html"
-                            class="mobile-nav-link"
-                            data-section="schedule"
+                        <a href="index.html#schedule" class="mobile-nav-link"
                             >Schedule</a
                         >
                     </li>
                     <li>
-                        <a
-                            href="index.html"
-                            class="mobile-nav-link"
-                            data-section="volunteer"
+                        <a href="volunteer.html" class="mobile-nav-link"
                             >Volunteer</a
                         >
                     </li>
                     <li>
-                        <a
-                            href="index.html"
-                            class="mobile-nav-link"
-                            data-section="partnership"
-                            >Partnership</a
+                        <a href="sponsor.html" class="mobile-nav-link"
+                            >Sponsor</a
                         >
                     </li>
+                    <li>
+                        <a href="exhibition.html" class="mobile-nav-link"
+                            >Exhibition</a
+                        >
+                    </li>
+                    <a
+                        href="register.html"
+                        class="btn-primary-ignite px-6 py-3 rounded-md font-montserrat"
+                        >Register Now</a
+                    >
                 </ul>
             </div>
-            <!-- Hero Section - 1/3 Height -->
+
+            <!-- Hero Content - 1/3 Height -->
             <div
-                class="h-[33vh] min-h-[300px] bg-gradient-navy relative flex items-center justify-center px-6 md:px-12 lg:px-20"
+                class="hero-content relative z-10 flex items-center justify-center h-[33vh] min-h-[300px] px-6 md:px-12 lg:px-20"
             >
                 <div class="text-center max-w-4xl mx-auto">
-                    <div class="flex items-center justify-center mb-6">
-                        <h1
-                            class="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white"
-                        >
-                            Event Registration
-                        </h1>
-                    </div>
                     <p
-                        class="text-lg md:text-xl text-white font-montserrat font-medium max-w-2xl mx-auto"
+                        class="text-brand-orange text-sm md:text-base font-montserrat font-semibold tracking-wider mb-4 uppercase"
                     >
-                        Join us for Ogbomoso Ignite 2026 - where technology
-                        meets entrepreneurship
+                        Exhibition
                     </p>
-                    <p
-                        class="text-sm md:text-base text-white opacity-90 font-montserrat mt-2"
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white mb-6"
                     >
-                        May 2, 2026 • Ogbomoso Innovation Hub, Nigeria
+                        Book For Exhibition
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl text-white/90 font-montserrat font-medium max-w-2xl mx-auto"
+                    >
+                        Gain visibility, engage with potential customers, and
+                        showcase your innovations to a highly engaged audience.
                     </p>
                 </div>
             </div>
@@ -1110,7 +1112,7 @@
                         <a
                             href="https://chat.whatsapp.com/IV3NhSWZIzTA3kXw5Q5JEy?mode=gi_c"
                             target="_blank"
-                            class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300"
+                            class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold cursor-pointer px-6 py-3 rounded-md transition-colors duration-300"
                         >
                             <svg
                                 class="w-5 h-5 mr-2"
